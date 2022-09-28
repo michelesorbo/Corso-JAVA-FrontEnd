@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Tabelle</title>
+</head>
+<body>
+    <h1>Le tabelle</h1>
+    <table border="1"> <!-- Inizo della creazione di una tabella -->
+        <tr><!-- Nova Riga -->
+            <td>Cella 1</td> <!-- Colonne o celle -->
+            <td>Cella 2</td>
+            <td>Cella 3</td>
+        </tr>
+        <tr>
+            <td>Cella 4</td>
+            <td>Cella 5</td>
+            <td>Cella 6</d>
+        </tr>
+    </table>
+
+    <h2>Spese giornaliere</h2>
+    <table border="1">
+        <tr>
+            <td>10 - Luglio</td>
+            <td>Pane</td>
+            <td>2€</td>
+        </tr>
+        <tr>
+            <td>11 - Luglio</td>
+            <td>Carne</td>
+            <td>15€</td>
+        </tr>
+        <tr>
+            <td>11 - Luglio</td>
+            <td>Scarpe</td>
+            <td>50€</td>
+        </tr>
+    </table>
+    
+    <h2></h2>
+    <table>
+        <table border="1">
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Città</th>
+            </tr>
+            <tr>
+                <td>Michele</td>
+                <td>Sorbo</td>
+                <td>Caserta</td>
+            </tr>
+            <tr>
+                <td>Mario</td>
+                <td>Rossi</td>
+                <td>Roma</td>
+            </tr>
+            <tr>
+                <td>Giuseppe</td>
+                <td>Verdi</td>
+                <td>Torino</td>
+            </tr>
+        </table>
+    </table>
+
+    <p>Spese Giornaliere</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Giorno</th>
+                <th>Tipo Spesa</th>
+                <th>Importo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10 - Luglio</td>
+                <td>Pane</td>
+                <td>2€</td>
+            </tr>
+            <tr>
+                <td rowspan="3">11 - Luglio</td>
+                <td>Carne</td>
+                <td>15€</td>
+            </tr>
+            <tr>
+                <td>Scarpe</td>
+                <td>50€</td>
+            </tr>
+            <tr>
+                <td>Pantaloni</td>
+                <td>60€</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" align="right">Totale</td>
+                <td>127€</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    
+</body>
+</html>

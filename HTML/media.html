@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<!--
+<body style="background-image: url('img/html-tagst.jpeg'); background-repeat: no-repeat; background-size:cover;">-->
+<body>
+    <p>Inserisco audi in HTML</p>
+    <p>
+        <audio controls>
+            <source src="audio/audio.ogg" type="audio/ogg">
+            <source src="audio/audio.mp3" type="audio/mp3">
+            il tuo browser non supporta i file audio<!-- Viene visualizza in caso di errore -->
+        </audio>
+    </p>
+    <p>Inserisco un video da locale</p>
+    <p>
+        <video width="320" height="240" autoplay muted controls>
+            <source src="video/video.mp4" type="video/mp4">
+            il tuo browse non supporta i video
+        </video>
+    </p>
+
+    <p>Inserire video da Youtube</p>
+    <p>
+        <iframe width="320" height="240" src="https://www.youtube.com/embed/JRJNvxoh844" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    <h3>Le immagini</h3>
+    <p>
+        <img src="img/html-tagst.jpeg" alt="Testo in caso di errore" title="Logo HTML">
+    </p>
+    <picture>
+        <source type="image/webp" srcset="img/html-tagst.webp">
+        <img src="img/html-tagst.jpeg" alt="HTML">
+    </picture>
+
+    <!-- <picture>
+        <source media="(max-width: 400px)" srcset="img/immagine_background_480.jpg">
+        <source media="(max-width: 800px)" srcset="img/immagine_background_800.jpg">
+        <source media="(max-width: 1920px)" srcset="img/immagine_background.jpg">
+        <img src="img/immagine_background.jpg" alt="Vista panoramica della città">
+    </picture> -->
+</body>
+</html>
