@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <form action="#" method="post">
+    <form action="#" method="get">
         <!-- <table>
             <tr>
                 <td>Nome:</td>
@@ -55,8 +55,8 @@
             <label for="auto">Che guidi?</label>
             <select name="auto">
                 <optgroup label="Auto">
-                    <option>Fiat</option>               
-                    <option>BMW</option>
+                    <option value="fiat">Fiat</option>               
+                    <option value="bmw">BMW</option>
                     <option>AUDI</option>
                 </optgroup>
                 <optgroup label="Moto">
@@ -65,6 +65,29 @@
                     <option>Yamaha</option>
                 </optgroup>
             </select>
+        </div>
+        <br>
+        <div>
+            <label for="primo">Scegli un primo</label><br>
+            <input type="radio" name="primo" value="pasta">Pasta<br>
+            <input type="radio" name="primo" value="Riso">Riso<br>
+            <input type="radio" name="primo" value="Lasagna">Lasagna<br>
+            <input type="radio" name="primo" value="genovese">Genovese
+        </div>
+        <br>
+        <div>
+            <label for="secondi">Scegli un secondo</label><br>
+            <input type="radio" name="secondi" value="carne">Carne<br>
+            <input type="radio" name="secondi" value="pesce">Pesce<br>
+            <input type="radio" name="secondi" value="mozzarella">Mozzarella
+        </div>
+        <br>
+        <div>
+            <label for="veicoli">Quale veicolo possiedi</label><br>
+            <input type="checkbox" name="veicoli[]" value="bicicletta">Bicicletta<br>
+            <input type="checkbox" name="veicoli[]" value="auto">Auto<br>
+            <input type="checkbox" name="veicoli[]" value="moto">Moto<br>
+            <input type="checkbox" name="veicoli[]" value="scooter">Scooter
         </div>
 
         <div>
