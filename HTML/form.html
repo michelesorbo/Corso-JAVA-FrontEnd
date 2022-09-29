@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Form</title>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <!-- <table>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="nome"></td>
+            </tr>
+            <tr>
+                <td>Cognome:</td>
+                <td><input type="text" name="cognome"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+        </table>  -->
+        
+        <div><!-- è un contenitore -->
+            <label for="nome">Inserisci il nome</label><!-- Etichetta dell'input -->
+            <input type="text" name="nome"><!-- Type text per inserire il testo -->
+        </div>
+        <div>
+            <label for="cognome">Inserisci il cognome</label>
+            <input type="text" name="cognome">
+        </div>
+        <div>
+            <label for="pwd">Inserisci la password<sup>*</sup></label>
+            <input type="password" name="pwd" required><!-- Type Password nserisce il testo con i puntini (modo nascosto)
+                                                        reuired: serve a rendere il campo obbligatorio-->
+        </div>
+        <div>
+            <label for="email">Inserisci la tua mail<sup>*</sup></label>
+            <input type="email" name="email" required><!-- Serve a controllare se hai scritto correttamente l'indirizzo mail -->
+        </div>
+        <div>
+            <label for="cap">Inserisci il tuo CAP</label>
+            <input type="text" name="cap" maxlength="5" minlength="5"><!-- maxlength: non fa inserire più caratteri di quelli specificati
+                                                                            minlenght: devi inserire almeno il numero di caratteri indicati-->
+        </div>
+        <div>
+            <label for="commento">Inserisci un commento</label>
+            <textarea name="commento" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <p>
+                * campi obbligatori
+            </p>
+        </div>
+        <div>
+            <input type="submit" value="Invia il modulo"> <input type="reset">
+        </div>
+    </form>
+    
+</body>
+</html>
