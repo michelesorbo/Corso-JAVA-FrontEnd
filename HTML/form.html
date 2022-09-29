@@ -26,7 +26,7 @@
         
         <div><!-- è un contenitore -->
             <label for="nome">Inserisci il nome</label><!-- Etichetta dell'input -->
-            <input type="text" name="nome"><!-- Type text per inserire il testo -->
+            <input type="text" name="nome" placeholder="Inserisci il tuo nome"><!-- Type text per inserire il testo -->
         </div>
         <div>
             <label for="cognome">Inserisci il cognome</label>
@@ -49,6 +49,22 @@
         <div>
             <label for="commento">Inserisci un commento</label>
             <textarea name="commento" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <label for="auto">Che guidi?</label>
+            <select name="auto">
+                <optgroup label="Auto">
+                    <option>Fiat</option>               
+                    <option>BMW</option>
+                    <option>AUDI</option>
+                </optgroup>
+                <optgroup label="Moto">
+                    <option>Ducati</option>
+                    <option>Aprilia</option>
+                    <option>Yamaha</option>
+                </optgroup>
+            </select>
         </div>
 
         <div>
