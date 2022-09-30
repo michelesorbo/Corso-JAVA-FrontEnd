@@ -1,0 +1,40 @@
+/* 1° tipo di selettori i tag */
+body{
+    background-color: cadetblue;
+}
+h2{
+    color: blue;
+    background-color: aqua;
+}
+
+h2.col_red{
+    color: red;
+}
+
+/* 2° Metodo la classe: ogni classe inizia con un . seguito dal nome della classe posso appliccarlo a qualsiasi tag */
+.par_coral{
+    border: 2px solid cornflowerblue;
+    border-radius: 4px;
+    background-color: coral;
+    box-shadow: 10px -8px 6px -3px rgba(0,0,0,0.75);
+}
+
+/* che la classe vale solo per i tag h1 quindi richiamata solo dai tag h1 */
+h1.titolo_h1{
+    color: brown;
+}
+
+/* Selettore di ID */
+#par_id{
+    color: rgb(255, 255, 255);
+    background-color: indigo;
+}
+
+/*Esempio radius su button */
+.btn{
+    color: lightgray;
+    background-color: darkcyan;
+    border: 2px solid darkslategrey;
+    border-radius: 4px 10px;
+}
+

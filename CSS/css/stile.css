@@ -1,0 +1,27 @@
+/* Nome della regola: Attributi della regola; (Ricordati il ; finale per chiudere la regola) */
+
+h1{
+    /* color: cadetblue, green;  regola sbagliata non applicata */
+    color: cadetblue;
+    background-color: blueviolet;
+    border: 4px dashed black;
+    border-radius: 5px;
+}
+
+h2{
+    color: red;
+    background-color: aquamarine;
+}
+
+a{
+    color: cadetblue;
+    text-decoration: none;
+    background-color: blueviolet;
+    border: 2px solid rgb(99, 7, 185);
+    border-radius: 4px;
+}
+a:hover{
+    background-color: rgb(99, 7, 185);
+    border: 2px solid blueviolet;
+    color: white;
+}

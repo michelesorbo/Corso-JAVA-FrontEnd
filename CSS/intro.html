@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione a CSS</title>
+    <!-- 2° Metodo CSS nella pagina -->
+    <link rel="stylesheet" href="css/stile.css">
+    
+    <!-- Si inserisce prima della chiusura dell'haed -->
+    <style>
+        h2{
+            background-color: royalblue;
+        }
+    </style>
+    <!-- Fine regole di CSS della pagina -->
+    <!-- 3° regola link esterno -->
+    
+</head>
+<body>
+    <!--
+        Ci sono 3 modi per inserire un codice CSS nella pagina
+        1° meno utilizzato e sconsigliato: inline
+    -->
+
+    <h3 style="color: red;">Sono l'esempio in line</h3>
+
+    <!--
+        2° metodo: nella pagina: Si crea un tag <stile> all'interno del tah <head>
+            e vado ad inserire tutte le regole di css che valgono solo per la pagina
+    -->
+    <h2>Sono l'esempio con style</h2>
+    
+    <!-- 3° metodo: inserisco un foglio di stile esterno (CSS Esterno)
+    per fare ciò devo collegare il foglio di stile alla pagina (Posso collegare più fogli di stile) -->
+    <h1>Sono l'esempio preso da stile.css</h1>
+</body>
+</html>
