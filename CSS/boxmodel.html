@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .content{
+            margin: 5px;
+        }
+        .box{
+            padding: 20px;
+            border: solid 1px red;
+            /* margin: 20px; */
+            height: 200px;
+            width: 200px;
+            background-color: #fffee0;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+        Block e inline box - display
+            Block) - crea una nuova riga
+                   - il box si espanderà fino ad occupare il 100% del container
+                   - width e height sono rispettate
+                   - padding, margin e border fanno allontanare altri elementi dal box
+            
+            Inline)- non crea una nuova riga
+                   - width e height non vengono applicate
+                   - vertical padding, margin e border si applicano ma non spostano altri elementi a differenza 
+                     di quelli orizzontali 
+
+    -->
+    <!-- <h1>Titolo</h1>
+    <p>Block</p>
+    <a style="padding: 60px 20px 100px 60px;">inline</a><a>inline</a>
+    <p style="padding-left:60px; padding-top:60px;">block2</p>
+
+    <ul>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+    </ul> -->
+<div class="content">
+    <div class="box">
+       Sono il contenuto del box
+    </div>
+</div>
+</body>
+</html>

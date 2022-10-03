@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gli sfonfi e le immagini</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    .box {
+        width: 200px;
+        height: 200px;
+        border: solid 1px black;
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+
+    .bg-color{
+        background-color: salmon;
+    }
+
+    .bg-gradiente{
+        background: rgb(34,193,195);
+        background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); 
+    }
+
+    .bg-image{
+        background-image: url(img/star.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-body{
+        background-image: url(img/bg_body.jpeg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+</style>
+<body class="bg-body">
+
+    <div class="box bg-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem provident minus repellat nulla, quos odio, tempora itaque unde libero totam adipisci vitae nostrum aut vel, voluptatibus fuga quis ipsa eum!</div>
+
+    <div class="box bg-gradiente"></div>
+
+    <div class="box bg-image">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet assumenda, possimus aliquid labore nulla deserunt rerum est itaque ad unde accusamus, fugit explicabo dolore aliquam corrupti? Nisi, temporibus et. Impedit?</div>
+
+    
+
+</body>
+</html>
