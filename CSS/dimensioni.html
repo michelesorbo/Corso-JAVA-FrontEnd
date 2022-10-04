@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensioni</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        .par1{
+            font-size: 1em;
+        }
+
+        .par2{
+            font-size: 1rem;
+        }
+
+        .par3{
+            font-size: 0.6rem;
+        }
+
+        div{
+            font-size: 20px;
+        }
+
+        .contenitore{
+            width: calc(80% + 20px); /*Serve a creare funzioni con valori calcolati */
+            height: 600px;
+            border: 1px solid red;
+            margin: auto;
+            overflow:scroll;
+        }
+
+        .par4{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Le misure di dimensione posso essere divise in misure assolute e relative. 
+        Le misure assolute indicano in modo assoluto un valore che sarà resterà immutato per sempre. 
+        Le misure relative invece vengono calcolate in base al rapporto con qualcos’altro, 
+        sia la grandezza dello schermo o un valore percentuale.
+        Abbiamo già detto più volte che il web moderno è composto da tanti schermi e dispositivi differenti. 
+        Diventa quindi fondamentale lavorare con dimensione relative in quanto permettono alla struttura delle nostra
+        pagina di essere flessibile in base allo schermo di utilizzo.
+
+        - em: fa riferimento al font-size del proprio parent
+        - ex
+        - ch
+        - rem: fa riferimento al font-size del root parent (HTML)
+        - lh
+        - vmin
+        - vmax
+    -->
+
+    <div>
+        <p class="par1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, dolor! Tempore sapiente assumenda aperiam eligendi sed dicta repellat. Eligendi esse ex totam quia nisi mollitia enim saepe aperiam repellendus perferendis!</p>
+        
+        <p class="par2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae assumenda fugit officia dolores atque ad doloribus, error iure aut commodi asperiores temporibus odio minus provident consequuntur. Sed at vel accusamus!</p>
+
+        <p class="par3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum libero voluptatum aliquid quaerat hic. Quisquam cupiditate error laborum illo perferendis ad, officia ut eveniet necessitatibus iusto rerum mollitia nisi dolore!</p>
+    </div>
+
+    <div class="contenitore">
+        <p class="par4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde officiis odit nulla corporis, consequatur quo laudantium fuga porro! Blanditiis earum sunt sequi quod quisquam. Voluptas ullam numquam vero vel necessitatibus.</p>
+    </div>
+    
+</body>
+</html>
