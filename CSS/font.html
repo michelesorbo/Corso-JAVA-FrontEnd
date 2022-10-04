@@ -8,14 +8,33 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
         .par1{
             font-family: 'Bungee Spice', cursive;
         }
 
         .par2{
-            font-family: 'Indie Flower', cursive;
+            font-family: 'Indie Flower', cursive; /* possiamo scegliere se avere font normale oppure italic*/
+            color: cadetblue;
+            font-size: 18px;
+            font-weight: 900; /* indichiamo la pesantezza del font ovvero il tipo di grassetto. Si misura da 100 a 900, possiamo anche usare parole come normal, bold, lighter, bolder */
+            font-style: italic;
+            text-align: justify;
+            line-height: 15px; /* Spazio tra le righe */
+            word-spacing: 20px; /* Spazio tra le parole */
+            text-transform: capitalize; /* ci permette di modficare il testo da mininuscolo, maiuscolo o tutte le iniziali maiuscole */
+            text-decoration: underline red; /* possiamo barrare il testo, sottolinearlo e aggiungere altre decorazioni */
         }
+
+        .par2:hover{
+            text-shadow: 4px 4px 5px red; /* ombreggiatura del testo */
+        }
+
+        .par3{
+            font-family: 'Amatic SC', cursive;
+        }
+
     </style>
 </head>
 <body>
@@ -23,7 +42,7 @@
 
     <p class="par2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum itaque iusto, ratione fugit harum eius nemo repudiandae debitis atque nostrum labore consequatur, omnis iste mollitia sequi voluptate porro doloribus!</p>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum itaque iusto, ratione fugit harum eius nemo repudiandae debitis atque nostrum labore consequatur, omnis iste mollitia sequi voluptate porro doloribus!</p>
+    <p class="par3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum itaque iusto, ratione fugit harum eius nemo repudiandae debitis atque nostrum labore consequatur, omnis iste mollitia sequi voluptate porro doloribus!</p>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum itaque iusto, ratione fugit harum eius nemo repudiandae debitis atque nostrum labore consequatur, omnis iste mollitia sequi voluptate porro doloribus!</p>
 </body>
