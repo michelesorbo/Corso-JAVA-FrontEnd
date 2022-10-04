@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio su Display</title>
+    <style>
+        .top-section{
+            border: 1px solid red;
+        }
+        
+        img{
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: auto;
+        }
+
+        h4{
+            text-align: center;
+        }
+
+        .container{
+            width: 1000px;
+            margin: auto; /*Serve per centrare l'elemento */
+        }
+
+        .wrap{
+            border: 3px solid black;
+            background-color: sandybrown;
+            padding: 20px; /*Spazio interno */
+            margin: 5px; /* Spazio esterno */
+            width: 30%;
+            display: inline-block; /* Cambio il comportamento del tad div */
+            box-sizing: border-box; /* Imposto la grandezza totale (Margin + padding + border) al 30% */
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="top-section">
+       <img src="img/star.png" alt="My Store">
+       <h4>Benvenuto nel mio store</h4> 
+    </div>
+
+    <div class="container">
+        <div class="wrap">
+            <h3>This is a heading</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus provident quibusdam nostrum accusantium, nisi non deleniti illo consequatur fuga aut qui voluptate ut pariatur doloribus eveniet sequi libero eligendi.</p>
+        </div>
+
+        <div class="wrap">
+            <h3>This is a heading</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus provident quibusdam nostrum accusantium, nisi non deleniti illo consequatur fuga aut qui voluptate ut pariatur doloribus eveniet sequi libero eligendi.</p>
+        </div>
+
+        <div class="wrap">
+            <h3>This is a heading</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus provident quibusdam nostrum accusantium, nisi non deleniti illo consequatur fuga aut qui voluptate ut pariatur doloribus eveniet sequi libero eligendi.</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
