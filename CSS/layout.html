@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Layout</title>
+    <style>
+        /*Flex Display */
+        .flex-wrapper{
+            display: flex;
+            /* flex-direction: column-reverse; */
+        }
+        .flex-wrapper>div{
+            padding: 20px;
+            margin: 5px;
+            background-color: salmon;
+        }
+
+
+        /*Grid Layout */
+        .grid-wrapper{
+            display: grid; /* Disposizione elementi tipo griglia*/
+            grid-template-columns: 1fr 1fr 1fr; /* Numero di colonne */
+            grid-template-rows: 100px 100px; /* Dimensioni delle celle */
+            grid-gap: 10px; /* Spaziatura tra le celle */
+        }
+
+        .grid-wrapper>div{
+            margin: 20px;
+            padding: 5px;
+            background-color: cadetblue;
+        }
+
+        .gbox1{
+            grid-column: 2 / 4;
+            grid-row: 1;
+        }
+
+        .gbox2{
+            grid-row: 1 / 3;
+            grid-column: 1;
+        }
+
+
+        /*Esempio layout*/
+        .grid-wrapper2{
+            display: grid; /* Disposizione elementi tipo griglia*/
+            grid-template-columns: 1fr 3fr 3fr; /* Numero di colonne */
+            grid-template-rows: 100px 100px; /* Dimensioni delle celle */
+            grid-gap: 5px; /* Spaziatura tra le celle */
+        }
+
+        .grid-wrapper2>div{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(129, 129, 0);
+        }
+
+        .testa{
+            grid-column: 1 / 4;
+            grid-row: 1;
+            background-image: url(img/bg_body.jpeg);
+            background-position: center;
+            background-attachment: fixed;
+            color: azure;
+        }
+
+        .content_center{
+            grid-column: 2 / 4;
+            grid-row: 2;
+        }
+
+        .footer_content{
+            grid-column: 1 / 4;
+            grid-row: 3;
+            height: 80px;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .menu{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Display Flex-->
+    <h1>Flexbox Layout</h1>
+    <div class="flex-wrapper">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+    </div>
+
+    <!-- Grid Layout -->
+    <h1>Grid Layout</h1>
+    <div class="grid-wrapper">
+        <div class="gbox1">One</div>
+        <div class="gbox2">Two</div>
+        <div class="gbox3">Three</div>
+        <div class="gbox4">Four</div>
+        <div class="gbox5">Five</div>
+        <div class="gbox6">Six</div>
+    </div>
+<hr>
+<!-- Esempio layout -->
+    <div class="grid-wrapper2">
+        <div class="testa">
+            <div class="menu">
+                <p>Ciao a tutti</p>
+            </div>
+        </div>
+        <div class="l_menu">Sono il menu</div>
+        <div class="content_center">Sono il contenuto</div>
+        <div class="footer_content">Sono il Footer</div>
+    </div>
+</body>
+</html>

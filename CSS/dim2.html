@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+    
+    :root{
+        --color-main: #98A14D;
+        --color-green: #5FAD4B;
+        --color-green-2: #89B84F;
+        --font-main-size: 14px;
+        --font-main-family:'Indie Flower', cursive;
+    }
+
+    html{
+        font-size: 12px;
+    }
+
+    .par1{
+        font-family: var(--font-main-family);
+        font-size: var(--font-main-size);
+    }
+
+    .contenitore{
+        font-size: 30px;
+        background-color: var(--color-btn);
+    }
+
+    .par2{
+        font-family: var(--font-main-family);
+        font-size: 1.5rem;
+    }
+
+    .par3{
+        font-size: 1.5em;
+        color: var(--color-main);
+    }
+
+    .btn1{
+        background-color: var(--color-btn);
+    }
+    .btn1:hover{
+        background-color: var(--color-btn-hover);
+    }
+
+</style>
+<body>
+    <p>Sono il paragrafo standard</p>
+    <p class="par1">Sono il paragrafo 1</p>
+    <div class="contenitore">
+        <p class="par2">Sono il paragrafo 2</p>
+        <p class="par3">Sono il paragrafo 3</p>
+    </div>
+
+    <div>
+        <button class="btn1">Cliccami</button>
+    </div>
+</body>
+</html>

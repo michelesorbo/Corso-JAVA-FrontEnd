@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formattare i Form</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        input[type="text"],
+        input[type="email"]{
+            border:  solid 2px #000;
+            padding: 10px;
+        }
+
+        input[type="submit"]{
+            background-color: blue;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover{
+            background-color: rgb(38, 109, 0);
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        div>p{
+            background-color: aquamarine;
+        }
+
+        .box{
+            width: 100%;
+            height: 100px;
+            background-color: burlywood;
+            margin-bottom: 10px;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/css_logo.png" alt="Css Logo">
+    </div>
+
+    <form>
+        <input type="text" name="nome">
+        <input type="email" name="email">
+        <input type="number" name="numero">
+        <input type="text" name="cognome">
+        <input type="submit" value="invia">
+    </form>
+
+    <p>Sono un paragrafo</p>
+    <div>
+        <p>Sono un paragrafo dentro un div</p>
+    </div>
+
+    <p>sono fuori</p>
+
+    <div>
+        <p>Sono un par div</p>
+    </div>
+
+    
+
+    <div class="box">
+        <img src="img/bg_body.jpeg">
+    </div>
+</body>
+</html>

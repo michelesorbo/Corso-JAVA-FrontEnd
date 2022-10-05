@@ -17,7 +17,7 @@
         .par2{
             font-family: 'Indie Flower', cursive; /* possiamo scegliere se avere font normale oppure italic*/
             color: cadetblue;
-            font-size: 18px;
+            font-size: 18px; /*Dimensione del testo */
             font-weight: 900; /* indichiamo la pesantezza del font ovvero il tipo di grassetto. Si misura da 100 a 900, possiamo anche usare parole come normal, bold, lighter, bolder */
             font-style: italic;
             text-align: justify;
@@ -33,6 +33,16 @@
 
         .par3{
             font-family: 'Amatic SC', cursive;
+        }
+
+        @media print{
+            .par1{
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            .par2{
+                font-family: 'Times New Roman', Times, serif;
+            }
         }
 
     </style>
