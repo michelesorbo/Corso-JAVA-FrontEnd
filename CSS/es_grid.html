@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>div{
+            background-color: cornflowerblue;
+            border: 1px solid black;
+            height: 100px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 10px;
+        }
+
+        .header{
+            grid-row: 1;
+            grid-column: 1 / 4;
+        }
+
+        .nav, .art, .aside{
+            height: 500px;
+        }
+
+        .foo{
+            grid-column: 1 / 4;
+            grid-row: 3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="nav">Nav</div>
+        <div class="art">Article
+            <div>Uno</div>
+            <div>Due</div>
+            <div>Tre</div>
+        </div>
+        <div class="aside">Aside</div>
+        <div class="foo">Footer</div>
+    </div>
+
+    
+</body>
+</html>
