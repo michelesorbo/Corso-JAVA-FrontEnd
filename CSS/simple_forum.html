@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Forum</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+        :root{
+            --font-style: 'Nunito Sans', sans-serif;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background: #131315;
+            font-family: var(--font-style);
+        }
+
+        .login-box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            background: #242026;
+            transform: translate(-50%, -50%); /* Serve per centrare precisamente il box al centro della pagina */
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+        }
+
+        .login-box h2{
+            text-align: center;
+            color: #fff;
+            padding: 0;
+            margin: 0 0 30px 0;
+            /* margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 30px;
+            margin-left: 0; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box"><!--Classe contenitore di tutto-->
+        <h2>Login</h2>
+        <form>
+            <!-- Regole per le caselle di input -->
+            <div class="user-box">
+                <input type="text" name="" required>
+                <label>Username</label>
+            </div>
+
+            <div class="user-box">
+                <input type="password" name="" required>
+                <label>Password</label>
+            </div>
+
+            <!-- Regole per il pulsante e la registrazione -->
+            <div class="btn-form">
+                
+                <a id="submit" href="#">Submit</a>
+
+                <div id="register">
+                    Non hai un account?
+                    <a href="#">Registrati</a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>

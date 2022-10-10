@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 10pt;
+            color: #5d5d5d;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        #wrapper{
+            width: 75%;
+            min-width: 700px;
+            max-width: 1100px;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header{
+            color: #edebea;
+            background-color: cadetblue;
+            height: 95px;
+            padding: 10px 20px;
+            margin: 10px 0 0 0;
+            flex: 0 0;
+        }
+
+        .container {
+            color: #222222;
+            padding: 0;
+            flex: 1 1;
+            display: flex;
+            flex-direction: row;
+            align-content: stretch;
+        }
+
+        .nav{
+            background-color: aquamarine;
+            font-size: 11pt;
+            padding: 10px;
+            margin: 0;
+            flex: 1 1;
+        }
+
+        .nav li {
+            margin: 1.4em;
+        }
+
+        .nav a{
+            text-decoration: none;
+            color: #5a5a5a;
+        }
+
+        .main{
+            background-color: white;
+            font-size: 10pt;
+            padding: 10px 15px 10px 20px;
+            flex: 5 5;
+        }
+
+        .main h1{
+            font-size: 20pt;
+        }
+        .main h2{
+            font-size: 14pt;
+        }
+
+        .main h3{
+            font-size: 11pt;
+            color: gray;
+        }
+
+        .footer{
+            color: #565656;
+            background-color: #b1bdb6;
+            text-align: center;
+            font-size: 9pt;
+            margin: 0 0 10px 0;
+            padding: 10px 0;
+            flex: 0 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="wrapper">
+        <div class="header">
+            <!-- Header Section -->
+        </div>
+
+        <div class="container">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Il parco</a></li>
+                </ul>
+
+            </div>
+
+            <div class="main">
+                <a href="#">Test</a>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At odio, voluptatibus, labore nam excepturi ipsa neque, accusamus nisi vel id reiciendis incidunt consectetur molestiae. Vel saepe ex asperiores ratione! Aut.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
