@@ -52,6 +52,76 @@
         let testo4 = `il nome è ${firstname} e ha ${eta}` //è in vigore da JS6
         let test4 = "il nome è " + firstname + " e ha " + eta //Metodo senza `
         console.log(testo4)
+
+        // let es_nome1 = prompt("Inserisci il nome1")
+        // console.log("il nome inserito è: " + es_nome1)
+        // console.log(`il nome inserito è ${es_nome1}`)
+
+        /* Esercizio 1:
+        Prendere da tastiera il nome e il cognome di una persona e stamparlo in consolo log
+        es: Il nome inerito e: ... e il cognome è: ...
+        */
+    //    let es_nome = prompt("Inserisci il nome")
+    //    let es_cognome = prompt("Inserisci il cognome")
+    //    console.log("Il nome inserito è: " + es_nome + " e il congome è: " + es_cognome)
+
+       //Gli operatori in JS
+        
+       let somma
+       somma = 3 + 4
+       console.log(somma)
+       let sot = 4 - 3
+       console.log(sot)
+       let div = 4/3
+       console.log(div)
+       let molt = 3*4
+       console.log(molt)
+
+       //Chiedere due numeri e fare la somma
+       let n1 = 3
+       let n2 = "4"
+       //Fare il CAST di una variabile
+       somma = n1 + n2
+       console.log(somma)
+       somma = n1 + Number(n2) //Da stringa a Number
+       console.log(somma)
+
+       let n1_str = String(n1) //Da intero a stringa
+
+    //    n1 = +prompt("Dammi un numero:")
+    //    console.log(typeof(n1))
+
+       //Le Costanti
+       //La costante si scrive sempre in maiuscolo e si deve sempre dichiarare.
+       //La costante non può essere modificata
+       const PGRECO = 3.14
+       console.log(PGRECO)
+       const TITOLOCORSO = "JAVA FRONT END"
+       console.log(TITOLOCORSO)
+
+       //Introduzione agli ARRAY (Vettori)
+       let alunni = ["Luca", "Vittorio", "Federico", "Simone"] //Dichiarare un ARRAY
+       console.log(alunni)
+       console.log(alunni[2])
+
+       let misto = ["Federico", 19, "Torre Annunziata", true]
+       console.log(misto)
+       console.log(misto[1])
+
+       //Gli Array associativi sostituisco l'indice con un nome assegnato da me
+       let corsista = {
+        nome: "Federico",
+        eta: 19,
+        citta: "Torre Annunziata",
+        frequnta: true
+       }
+
+       console.log(corsista)
+       console.log(corsista["eta"])
+
+    //    alert(corsista["eta"])
+    
+
        
 
     </script>

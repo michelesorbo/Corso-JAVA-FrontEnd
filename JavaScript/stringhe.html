@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Stringhe</title>
+</head>
+<body>
+    <p id="par"></p>
+    
+    <script>
+        let str = "Corso di JavaScript presentato da Protom e il docente è Michele Sorbo"
+        console.log(str)
+
+        console.log(str.length)//Stampa la lunghezza della stringa (numeri di caratteri spazzi inclusi)
+
+        //Le stringhe sono viste come array di caratteri
+        console.log(str[0])//Primo carattere
+        console.log(str[str.length - 1]) //Stampo l'ultimo elemento della stringa
+
+        console.log(str.indexOf('di')) //Restituisce l'indice di partenza della parola inserita
+
+        //Come divedere una stringa
+        console.log(str.slice(6, 60))
+
+        //Esempio da il fino alla fine
+        console.log(str.slice(str.indexOf("il")))
+
+        let str2 = "       Ciao Mondo     "
+        console.log(str2.length)
+        //TRIM serve ad eliminare gli spazzi inizio e fine stringa
+        console.log(str2.trim().length)
+
+        //INCLUDES serve a verificare se una parola è contenuta in una stringa
+        console.log(str.includes("michele"))
+
+        console.log(str.toLocaleLowerCase())
+        console.log(str.toLocaleUpperCase())
+
+        let parola = prompt("Inserisci la parola da cercare")
+
+        console.log(parola.toLocaleLowerCase())
+
+        //Es: Verificare se la parola inserita è presente nella stringa
+
+
+        //Cambiare la parole in una stringa
+        console.log(str.replace("JavaScript", "PHP"))
+
+        //Come inserire un testo in un tag HTML tramite id
+        const par = document.getElementById('par')
+        par.innerHTML = "<h1>" + parola + "</h1>"
+
+    </script>
+</body>
+</html>
