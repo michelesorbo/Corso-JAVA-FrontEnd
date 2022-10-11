@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Variabili</title>
+</head>
+<body>
+
+    <h1>Le variabili in JavaScript</h1>
+
+    <!-- Inizio JavaScript -->
+    <script>
+        /*
+        Sono un commento multiriga
+        */
+       // window.alert("Ciao Mondo!!!")
+
+       let nome //Con il comendo let vado a dichiarare una variabile che conterrà un nome
+       console.log(typeof(nome)) //typeof serve a vedere di che tipo è il contenuto della variabile
+       nome = 12 //Inizializzo nome come Numerico
+       console.log(typeof(nome))
+       nome = "Michele" //Inizializzo nome come stringa
+       console.log(typeof(nome))
+
+       let cognome = "Sorbo" //Dichiaro e inizializzo una variabile
+       console.log(cognome)
+       cognome = "Lama"
+       console.log(cognome)
+       /*
+        1) il nome delle variabili deve essere descrittivo
+        2) il nome delle variabili non possono contenere spazzi
+        3) le varibili iniziano sempre con una lettera minuscola
+        4) non usare mai lettere accentate
+        5) non usare nomi del programma es: for let var string while if else
+       */
+
+       let firstname = "Michele" //Variabile di tipo stringa
+       let eta = 43 //Variabile di tipo Numerico
+       let num_sci = 9007199254720n //Variabile di tipo BigInt
+       let bool = true //Variabilei di tipo boolenao TRUE/FALSE
+
+       let testo1 = "Sono il testo uno un'auto e disse \"ciao\" " //Caratteri di Escape
+       let testo2 = 'Sono il testo 2 un\'auto'
+       let testo3 = "Il contenuto della variabile firstname è: " + firstname + ' ed è il professore del corso';
+       console.log(testo3)
+
+       /*
+       The native backtick shortcut on Windows is Alt + 96 , whereas the native shortcut for the tilde is Alt + 126 .
+       */
+        let testo4 = `il nome è ${firstname} e ha ${eta}` //è in vigore da JS6
+        let test4 = "il nome è " + firstname + " e ha " + eta //Metodo senza `
+        console.log(testo4)
+       
+
+    </script>
+    
+</body>
+</html>
