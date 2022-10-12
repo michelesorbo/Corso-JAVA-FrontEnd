@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <script>
+        let numeriPrimi = [2, 3, 5, 7, 11, 34]
+        let misto = [1.1, true, "a"]
+        let alunni = [] //creo un array vuoto
+
+        //Gli array sono costituiti dalla coppia indice valore
+        console.log(numeriPrimi[1])
+        numeriPrimi[1] = 4 //Modifico il valore in un determita indice dell'array
+        console.log(numeriPrimi[1])
+
+        //Per conoscere la lunghezza di un array
+        console.log(numeriPrimi.length) //Mi dice quanti elemnti ci sono nell'array CONTA INIZIANDO DA 1
+        console.log(numeriPrimi[numeriPrimi.length - 1]) //Stampa l'ultimo elemento dell'array
+
+        //Inserire elementi in array in ultima posizione
+        alunni.push("Errico")
+        console.log(alunni)
+        alunni.push("Federico", "Luca")
+        console.log(alunni)
+
+        //Inserire un elemnto all'inizio dell'array
+        alunni.unshift("Vittorio")
+        console.log(alunni)
+
+        //Eliminare elemnenti in array
+        alunni.pop() //Elimina l'ultimo elemento dellarray
+        console.log(alunni)
+        alunni.shift() //Elimina il primo elemento dell'array
+        console.log(alunni)
+
+        //forEach() come scorrere un array
+        let numeri = [1,3,5,6,7,8,12,35,65]
+        //numeri.forEach(numero => console.log(numero))
+        numeri.forEach(numero => {
+            console.log("Il doppio del numero è: " + (numero * 2) )
+        })
+
+        //Dato l'array numeri fare la somma di tutti i numeri
+        let somma = 0
+        numeri.forEach(numero => {
+            //somma = somma + numero
+            somma += numero
+        })
+
+        console.log("La somma totale è: " + somma)
+        //Fammi la media dell'array somma diviso il numero degli elemnti nell'array
+        console.log("La media è: " + (somma / numeri.length))
+
+        //Creare un array con i numeri invertiti
+        //console.log(numeri.reverse())
+        let numeri_revers = []
+        numeri.forEach(numero =>{
+            numeri_revers.unshift(numero)
+        })
+
+        console.log(numeri_revers)
+
+        let array_conta = [1,5,3,5,5,7,5,8,9,5,5]
+        //Contare quante volte in un array appare il numero 5
+        //Dire qunti numeri sono pari e quanti sono dispari
+        //Fare la somma dei numeri dispari
+        //Sommare solo i numeri inferiori a 5
+
+    </script>
+    
+</body>
+</html>
