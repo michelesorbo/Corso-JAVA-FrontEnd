@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For</title>
+    <style>
+        .rosso{
+            color: brown;
+            font-size: 22px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabellina del 2</h2>
+    <div class="rosso" id="par"></div>
+    <h2>Esercizio riconosci la decina</h2>
+    <div id="par2"></div>
+    <h2>Cicli Annidati</h2>
+    <div id="par3"></div>
+
+    <script>
+        const par = document.getElementById("par")
+        const par2 = document.getElementById("par2")
+        const par3 = document.getElementById("par3")
+
+        //Cilco conta finmo a 10
+        for(let i = 0; i <= 10; i++){
+            par.innerHTML += i + " x 2 = "+ (i * 2)+"<br>"
+            //console.log(i)
+        }
+
+        // //Stampa a video i numeri dispari compresi fino a 100
+        // for(let i = 0; i<= 100; i++){
+        //     if(i%2 == 1){
+        //         console.log(i)
+        //     }
+        // }
+        
+        //Chiedere 5 mumeri da tastiera e stamprne la somma
+        //Dovete usare solo le variabili
+        let somma = 0;
+        // for(let i = 1; i<=5; i++){
+        //     let n = +prompt("Dammi il "+ i +"° numero da sommare")
+        //     somma += n
+        // }
+
+        //console.log(somma)
+
+        /********* Rincorri la decina ******************************************
+         Scrivi un programma che che stampi i numeri da 1 a 100 andando a capo ogni 10.
+        Esempio:
+            Output: 1 2 3 4 5 6 7 8 9 10
+                    11 12 13 14 15 16 17 18 19 20
+                    21 22 23 24 25 26 27 28 29 30
+                    31 32 33 34 35 36 37 38 39 40
+                    41 42 43 44 45 46 47 48 49 50
+                    51 52 53 54 55 56 57 58 59 60
+                    61 62 63 64 65 66 67 68 69 70
+                    71 72 73 74 75 76 77 78 79 80
+                    81 82 83 84 85 86 87 88 89 90
+                    91 92 93 94 95 96 97 98 99 100
+        Consiglio:
+        Per andare a capo usa '<br>'. Numero % 10 == 0
+        *********************************************************************/
+       for(let i = 1; i <= 100; i++){
+        par2.innerHTML += i + " "
+        if(i%10 == 0){
+            par2.innerHTML += "<br>"
+        }
+       }
+
+       //Fai la somma dei numeri e chiedei quanti numeri vuole sommare l'utente
+    //    1) somma = 0
+    //    2)numeri da sommare
+    //    3)cilco i = 1; i<= numeri da sommare; i++
+    //    4) chiedo i numeri da sommare
+    //    5) aggiorno la somma con i numeri 
+    //    6) stampo la somma ottenta nel ciclo
+
+    //Chiedere 5 numeri e dire se il numero inserito è pari o dispari qunti numeri sono pari e quanti sono dispari
+    // let pari = 0;
+    // let dispari = 0;
+
+    // for(let i = 1; i<=5; i++){
+    //     let n = +prompt("Dammi un numero")
+    //     if(n%2 == 0){
+    //         pari++;
+    //         console.log("Pari")
+    //     }else{
+    //         dispari++
+    //         console.log("Dispari")
+    //     }
+    // }
+
+    // console.log("Hai inserito "+pari+" numeri pare e "+dispari+" numeri dipari")
+
+    //Chiedere 3 numeri e stamparne il doppio
+    //Indovina il numero hai tre tentativi (Il numro da dindovinare è compreso tra 1 e 10)
+    // console.log(Math.floor(Math.random() * 10) + 1) //Serve ad avere numeri casuali da 1 a 10
+
+
+    // let numero_da_indovinare = Math.floor(Math.random() * 10) + 1
+    // console.log(numero_da_indovinare)
+
+    // for(let i = 1; i<=3; i++){
+    //     let num = +prompt("Inserisci il numero, hai tre tentativi questo è il "+i)
+    //     if(num == numero_da_indovinare){
+    //         console.log("Hai indovinato")
+    //         break; //fermare il ciclo for
+    //     }else{
+    //         console.log("Sabgliato")
+    //     }
+    // }
+
+    //Scrivere un programma che legge 5 numeri da tastiera e ne restituisce il minimo
+    // let min; //Ricordo il valore più piccolo che trovo
+    // let n = +prompt("inserisci 3 numeri e ti dirò il minore")
+    // min = n;
+    // for(let i = 2; i <= 5; i++){
+    //     n = +prompt("inserisci un nuovo numero")
+    //     if(n < min){
+    //         min = n
+    //     }
+    // }
+
+    // console.log("Il valore minimo inseri è: "+min)
+
+    // Scrivere un programma che Lancia un numero di dadi a sei facce 
+    // scelto dall’utente, mostra i risultati e dice quante volte è uscito il 6 e a quale lancio
+
+    // let dadi = +prompt("Quanti dadi vuoi lanciare?")
+    // let sei = 0; //Vado a contare quante volte esce il numero 6
+
+    // for(let i = 1; i <= dadi; i++){
+    //     let lancio = Math.floor(Math.random() * 6) + 1
+    //     console.log(lancio)
+    //     if (lancio == 6) {
+    //         sei++
+    //     }
+    // }
+
+    // console.log("Hai fatto "+sei+" sei")
+
+        //Versione con ricordo del lancio e somma toale dei lanci
+    // let dadi = +prompt("Quanti dadi vuoi lanciare?")
+    // let sei = []; //Vado a contare quante volte esce il numero 6
+    // let somma_dadi = 0
+
+    // for(let i = 1; i <= dadi; i++){
+    //     let lancio = Math.floor(Math.random() * 6) + 1
+    //     console.log(lancio)
+    //     somma_dadi += lancio
+    //     if (lancio == 6) {
+    //         sei.push(i) //Ricordo il numero del lancio in cui è uscito 6 come risultato del lancio
+    //     }
+    // }
+
+    // console.log("La somma totale dei lanci è: "+somma_dadi)
+    // console.log("Il sei è uscito "+sei.length+" volte")
+    // sei.forEach(n =>{
+    //     console.log("Al lancio n° "+n)
+    // })
+
+    //Stampare le tabelline dal 1 al 5 che vanno da 1 a 10
+    for(let i = 1; i<= 3; i++){
+        for(let j = 1; j <= 5; j++){
+            //par3.innerHTML += "Valroe di i: "+i+" Valore di j: "+j+"<br>"
+            par3.innerHTML += i + " x " + j + " = " + (i*j) + "<br>"
+        }
+    }
+    </script>
+</body>
+</html>
