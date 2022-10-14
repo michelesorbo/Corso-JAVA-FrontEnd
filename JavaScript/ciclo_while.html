@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo While</title>
+</head>
+<body>
+    
+    <script>
+        // //FOR = riper per un numero di volte
+        // for(let i = 1; i <= 10; i++){
+        //     console.log(i)
+        // }
+
+        // //WHILE = Finchè una condizione è vera fai qualcosa
+        // let y = 1 //1° passo del for Inizializzazione
+        // while(y <= 10){ //Condizione
+        //     console.log(y)
+        //     y++ //Incremento
+        // }
+
+        // //Fai la somma dei numeri inseriti da tastiera fermati quando viene inserito 0
+        // let somma = 0
+        // let conta = []
+        // let num = +prompt("Dammi un numero e farò la somma. Inserisci 0 per terminare")
+
+        // while(num != 0){
+        //     somma += num
+        //     conta.push(num)
+        //     num = +prompt("Inserisci altro numero. 0 per terminare")
+        // }
+
+        // console.log("La somma è: "+somma+ " e hai inserito "+conta.length+" numeri e sono "+conta)
+
+        // //Inserisci in un array alunni i nomi degli alunni passati da prompt. Terminare quando si inserisce fine
+        // let alunni = [] //Array che contiene tutti gli alunni inseriti
+        // let nome = prompt("Inserisci il nime dell'alunno da aggiungere, fine per terminare") //Memorizzare il nome da salvare nell'arrau
+
+        // while(nome != "fine"){
+        //     alunni.push(nome) //Inserisco il nome dell'alunno nell'array
+        //     nome = prompt("Inserisci altro alunno, fine per terminare") //Chiedo di inserire un nuovo nome
+        // }
+
+        // console.log("Hai inserito "+alunni.length+ " e sono: "+alunni)
+
+        // //DO WHILE esegue il cilo while almeno una volta
+        let alunni = []
+        let nome
+
+        do{
+            nome = prompt("Inserisi un alunno, fine per terminare")
+            alunni.push(nome)
+        }while(nome != "fine")
+
+        console.log("Hai inserito "+alunni.length+ " e sono: "+alunni)
+    </script>
+</body>
+</html>

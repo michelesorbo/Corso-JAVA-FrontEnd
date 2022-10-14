@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi 01</title>
+</head>
+<body>
+
+    <script>
+        //1) Riempire un array con 5 numeri casuali compresi tra 1 e 10 NON FARE 5 INSERIMENTI ma usare un ciclo
+        // Farlo sia con il for che con il while
+
+        //Usiamo il for
+        let casuali_for = []
+        //let casuale = Math.floor(Math.random() * 10) + 1//Sbagliato 
+        
+        for(let i = 0; i<5;i++){
+            casuali_for.push(Math.floor(Math.random() * 10) + 1)
+        }
+
+        console.log(casuali_for)
+
+        //Usiamo il while
+        let casuali_while = []
+        while(casuali_while.length < 5){
+            casuali_while.push(Math.floor(Math.random() * 10) + 1)
+        }
+
+        console.log(casuali_while)
+        
+        //2) Creare un array di 5 numeri casuali comrpesi tra 1 e 5 tutti diversi (includes)
+        let non_rip = []
+        let conta = 0
+        while(non_rip.length < 5){
+            let estratto = Math.floor(Math.random()*5)+1
+            conta++
+            if(!non_rip.includes(estratto)){
+                non_rip.push(estratto)
+            }
+        }
+
+        console.log(non_rip+ " e hai effettuato "+conta+ " Estrazioni")
+
+        //3) Creare una ruota es Ruota di Napoli che contiene 5 numeri casuali compresi tra 1 e 90 tutti diversi
+        //Chiedere all'utente quanti numeri vuole giocare Es. 3 numeri
+        //Chiedere quanto vuole giocare Es. 2€
+        //Chiedere i nnumeri da giocare
+        //Verificare se ha vinto. le vincite sono:
+        //2 numeri indovinati vinci due volte la gicata Es. Punto 2€ vinco 4€
+        //3 numeri indovinati vinci 3 volte la gicata 
+        //4 numeri indovinati vinci 4 volte la gicata
+        //5 numeri indovinati vinci 5 volte la gicata
+        //Se il giocare gioca più di 2 numeri sottrarre all'eventuale vincita 1€ per ogni numero giocato
+        //Es. Gioco 5 numeri e punto 5€ faccio ambo vinco 10€ e ne tolgo 1 per ogni numero quindi 10€-5€ = 5€ di vincita 
+
+        /*
+        Svolgimento:
+        1) Creare la ruota con i numeri diversi
+        2) Chiedere quanti numeri vuole giocare
+        3) Chiedere quanto vuole giocare
+        4) Controllare quanti numeri ha indovinato
+        5) Calcolare l'eventuale vincita con eventuiali penalità (Se indovina meno di 2 numeri dire mi dispiace ma non hai indovinato nulla)
+        */
+
+    </script>
+    
+</body>
+</html>

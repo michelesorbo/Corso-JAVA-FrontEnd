@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto</title>
+</head>
+<body>
+
+    <h2>Tenta la fortuna</h2>
+
+    <input type="text" id="numeri_ins" placeholder="Inserisci fino a 5 numeri divisi da uno spazio">
+    <button id="btn">Controlla se hai vinto</button>
+
+    <script>
+        const numeri_ins = document.getElementById("numeri_ins") //Riferimento alla casella di input
+        const btn = document.getElementById("btn") //Riferimento al pulsante
+
+        //Quando premo il pulsante
+        btn.addEventListener("click", () => {
+            console.log(typeof(numeri_ins.value)) //.value serve a prendere il contenuto della casella di input
+            let ar_ins = numeri_ins.value.split(" ")
+            console.log(ar_ins)
+        })
+
+
+    </script>
+    
+</body>
+</html>
