@@ -14,18 +14,42 @@
         <input type="text" id="inp_2">
         <button id="btn_1">+</button>
         <button id="btn_2">-</button>
-        <button id="btn_3">X</button>
+        <button id="btn_3">x</button>
         <button id="btn_4">:</button>
         <p id="risultato">Faccio apparire il risultato</p>
     </div>
 
     <script>
         //Eseguire le 4 operazioni
-        const inp_1 = document.querySelector("#inp_1")
-        const btn_1 = document.querySelector("#btn_1")
+        const inp_1 = document.querySelector("#inp_1") //Il primo input
+        const inp_2 = document.querySelector("#inp_2") //Il secondo input
+        const btn_1 = document.querySelector("#btn_1") //Pulsante con +
+        const btn_2 = document.querySelector("#btn_2") //Pulsante con -
+        const btn_3 = document.querySelector("#btn_3") //Pulsante con x
+        const btn_4 = document.querySelector("#btn_4") //Pulsante con :
+        const ris = document.querySelector("#risultato") //Scrivo il risultato
 
+        //Vado ad ascoltare l'evento click sul pulsante +
         btn_1.addEventListener("click", ()=>{
-            console.log(typeof(inp_1.value))
+            ris.innerHTML = "La somma è: " + (Number(inp_1.value) + Number(inp_2.value))
+        })
+
+        //Vado ad ascoltare l'evento click sul pulsante -
+        // btn_2.addEventListener("click", ()=>{
+        //     ris.innerHTML = "La sottrazione è: " + (Number(inp_1.value) - Number(inp_2.value))
+        // })
+        btn_2.onclick = ()=>{
+            ris.innerHTML = "La sottrazione è: " + (Number(inp_1.value) - Number(inp_2.value))
+        }
+
+        //Vado ad ascoltare l'evento click sul pulsante x
+        btn_3.addEventListener("click", ()=>{
+            ris.innerHTML = "La moltiplicazione è: " + (Number(inp_1.value) * Number(inp_2.value))
+        })
+
+        //Vado ad ascoltare l'evento click sul pulsante :
+        btn_4.addEventListener("click", ()=>{
+            ris.innerHTML = "La somma è: " + (Number(inp_1.value) / Number(inp_2.value))
         })
     </script>
     

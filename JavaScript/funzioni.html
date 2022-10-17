@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni</title>
+</head>
+<body>
+    <input type="text" id="prezzo" placeholder="Prezzo">
+    <input type="text" id="sconto" placeholder="sconto">
+    <button id="btn_sconto">Calcola sconto</button>
+    <p>Risultato sconto</p>
+    
+    <button id="btn">Saluta</button>
+    <script>
+        const btn = document.querySelector("#btn")
+        const prezzo = document.querySelector("#prezzo")
+        const sconto_in = document.querySelector("#sconto")
+        const btn_s = document.querySelector("#btn_sconto")
+        const par = document.querySelector("p")
+
+        function saluta(){ //Funzione senza parametri e senza ritorno
+            alert("Ciao Mondo")
+        }
+
+        function saluta_nome(nome){ //Funzione con parametri e senza ritorno
+            //par.innerHTML = "Ciao " + nome
+            alert("Ciao " + nome)
+        }
+
+        function dividi(a,b){
+            if(a != 0 && b != 0){
+                return a/b
+            }else{
+                return "Divisione per 0 non consentita"
+            }
+        }
+
+        function somma(a, b){
+            console.log(a+b)
+        }
+
+        function sconto(prezzo, percentuale){
+            return prezzo - ((prezzo * percentuale)/100)
+        }
+        
+        btn_s.addEventListener("click", ()=> {
+            par.innerHTML = "Il prezzo scontato è: " + sconto(Number(prezzo.value), Number(sconto_in.value)) + "€"
+        })
+
+        //saluta_nome("Errico")
+        //btn.addEventListener("click", saluta_nome) //Faccio partire la funzione saluta ogni volta che clicco sul pulsante
+
+        //saluta()
+
+        // console.log(dividi(8,4))
+        // let divisione = dividi(0,7) //dividi = 4/5
+        // console.log(divisione)
+
+
+        // let saldo = sconto(100, 20)
+        // console.log("il prezzo scontato è: "+saldo+"€")
+
+        
+
+        // somma(3,7)
+    </script>
+</body>
+</html>
