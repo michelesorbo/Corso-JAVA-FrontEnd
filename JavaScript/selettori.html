@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I selettori di HTML con JavaScript</title>
+    <style>
+        .sub_title{
+            color: red;
+        }
+
+        #div_1{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titolo">Titolo della pagina</h1>
+    <div id="div_1">Sono il div</div>
+    <p>Sono p della pagina</p>
+    <h2 class="sub_title">Sono titolo da pagina</h2>
+    <h2>Sono il secondo nella pagina</h2>
+    <p>Sono il seocndo p</p>
+    <p>Sono il terzo p</p>
+    <input type="text" id="testo">
+    <button id="btn">Cliccami</button>
+
+    <script>
+        //Selezionare elemento in html con id
+        //1° Metodo
+        const titolo = document.getElementById("titolo") //Posso selezionare solo gli elementi con id settato
+        const div_1 = document.querySelector("#div_1") //Vado a prendere l'elemento con id = div_1
+        //const par = document.querySelector("p") //Vado a prendere il primo tag p
+        const sub_title = document.querySelector(".sub_title") //Vado a prendere il primo elemento con la classe .sub_title
+        const pars = document.querySelectorAll("p") //Seleziono tutti gli elementi p del documento
+        const testo = document.querySelector("#testo")
+        const btn = document.querySelector("#btn")
+
+        console.log(pars.length)
+        pars[1].innerHTML = "Cambio il 2 da JS"
+
+        pars.forEach(par =>{
+            par.innerHTML = "Cambio tutto da JS e i vale "
+        })
+        // for(let i = 0; i<=pars.length; i++){
+        //     pars[i].innerHTML = "Cambio tutto da JS con FOR"
+        // }
+
+        titolo.innerHTML = "Sono il titolo dato da JS"
+        div_1.innerHTML = "Sono il div di JS"
+        //par.innerHTML = "Sono p da JS"
+        sub_title.innerHTML = "Sono il sottotitolo da JS"
+
+        //Come catturare un evento
+        //Evento sulla casella di input
+        // testo.addEventListener("change", () => { 
+        //     if(testo.value == "vittorio"){
+        //         div_1.innerHTML = "Hai scritto Vittorio"
+        //     }else{
+        //         alert("Tutto ok")
+        //     }
+        // });
+
+        //Evento quando clicco il pulsante
+        btn.addEventListener("click", () =>{
+            div_1.innerHTML = testo.value
+        })
+    </script>
+    
+</body>
+</html>

@@ -64,6 +64,65 @@
         5) Calcolare l'eventuale vincita con eventuiali penalità (Se indovina meno di 2 numeri dire mi dispiace ma non hai indovinato nulla)
         */
 
+        //Creo la ruota con i 5 numeri casuali compresi tra 1 e 90
+        let ruota = [] //Creo l'array ruota vuoto
+        let estratto_ruota;
+
+        while(ruota.length < 5){
+            estratto_ruota = Math.floor(Math.random() * 90 ) + 1 //Estraggo il numere casuale
+            if(!ruota.includes(estratto_ruota)){ //Controlo che il numero estratto non sia presente nell'array
+                ruota.push(estratto_ruota) //Inserisco il numero nell'array
+            }
+        }
+
+        console.log(ruota)
+
+        //Chiedo quanti numeri vuole giocare
+        let numeri_giocati = +prompt("Quanti numeri vuoi giocare (minimo 2 massimo 5")
+        let giocata = +prompt("quanto vuoi scommettere?")
+
+        let numeri_gicatore = []
+        if(numeri_giocati >= 2 && numeri_giocati <= 5){
+            let i  = 1;
+            while(i <= numeri_giocati){ //Conto i numeri giocati
+                let num_play = +prompt("inserisci il numero "+ i +"° numero") //Chiedo i numeri da giocare
+                if(!numeri_gicatore.includes(num_play) && (num_play >= 1 && num_play <= 90)){ //Controllo se il numero è già presente
+                    numeri_gicatore.push(num_play) //Inserisco il numero
+                    i++ //Incremento il contatore
+                }else{
+                    alert("Numero già giocato o numero fuori range")
+                }
+            }
+        }else{
+            alert("Scelta non consentita")
+        }
+
+
+        //Controllare quanti numeri ho indovinato
+        let indovinati = []
+        numeri_gicatore.forEach(numero => {
+            if(ruota.includes(numero)){
+                indovinati.push(numero)
+            }
+        })
+
+        console.log(indovinati.length)
+        //Controllo la vincita
+        if(indovinati.length == 2){
+            alert("Hai fatto ambo e hai vinto "+ (2 * giocata) + "€\nNumeri indovinati "+indovinati)
+        }else if(indovinati.length == 3){
+            alert("Hai fatto terno e hai vinto "+ (3 * giocata) + "€\nNumeri indovinati "+indovinati)
+        }else if(indovinati.length == 4){
+            alert("Hai fatto quaterna e hai vinto "+ (4 * giocata) + "€\nNumeri indovinati "+indovinati)
+        }else if(indovinati.length == 5){
+            alert("Hai fatto cinquina e hai vinto "+ (5 * giocata) + "€\nNumeri indovinati "+indovinati)
+        }else{
+            alert("Hai fatto schifo")
+        }
+
+        
+        console.log(numeri_gicatore)
+
     </script>
     
 </body>
