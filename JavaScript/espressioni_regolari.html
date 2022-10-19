@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espressioni Regolari (RegExp)</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td><input type="text" id="nome"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" id="pwd"></td>
+        </tr>
+        <tr>
+            <td>EMail</td>
+            <td><input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td>CAP</td>
+            <td><input type="text" id="cap"></td>
+        </tr>
+        <tr>
+            <td>C. F.</td>
+            <td><input type="text" id="cf"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btn">Verifica</button></td>
+        </tr>
+    </table>
+
+    <script>
+        const btn = document.querySelector("#btn")
+        const nome = document.querySelector("#nome")
+        const cap = document.querySelector("#cap")
+        const cf = document.querySelector("#cf")
+
+        //Espressioni Regolari da usare
+        // regola.test(campo da testare)
+        let rx_cap = /^[0-9]{5}$/ //Espressione per controllare il CAP
+        let rx_inizio_con = /^[ABDf]/ //Il mio testo deve iniziare con una di questi caratteri
+        let rx_inizio_diverso = /^[^ABDf]/ //Non iniziano con i valori nelle quadre
+        let rx_cf = /^[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}$/ //AAABBB12C21D345E 
+        btn.addEventListener("click", ()=>{
+            if(rx_cf.test(cf.value)){
+                console.log("Regola OK")
+            }else{
+                console.log("Fallito test")
+            }
+           
+        })
+    </script>
+</body>
+</html>
