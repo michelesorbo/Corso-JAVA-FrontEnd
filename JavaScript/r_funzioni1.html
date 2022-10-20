@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripasso Funzioni 1</title>
+</head>
+<body>
+    <h2>Ripasso funzioni</h2>
+    <button onclick="genera_pwd()">Genera PWD</button>
+    <button onclick="genra_casuali()">Genera casuale</button>
+    <button id="btn">Genera con 2° metodo</button>
+
+    <script>
+        //Gli veventi
+        //1 metodo direttamenti nel tag con onclick onselect e scrivendo il nome della funzione da chiamare
+
+        //2 metodo prendere l'id del button
+         const btn = document.querySelector("#btn")
+        // btn.onclick = genra_casuali()
+
+        //3 metodo con addEventListner
+        //btn.addEventListener("click", genra_casuali)
+        btn.addEventListener("click", ()=>{
+            genera_pwd(5)
+        })
+
+        //Genera 5 numeri casuali
+        function genra_casuali(){
+            let numeri_casuali = "";
+            for(let i = 1; i <= 5; i++){
+                numeri_casuali += Math.floor(Math.random() * 10) + 1
+            }
+
+            //return numeri_casuali;
+            console.log(numeri_casuali)
+        }
+
+        //Funzione genera password
+        function genera_pwd(lunghezza_pwd = 10){
+            const caratteri_pwd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,;:!?./§»~#{[|`\^@]}&"
+            let pwd = "" //Creo la varabile per ricordare la password generata
+
+            //Faccio il ciclo per generare una pwd di n lunghezza
+            for(let i = 1; i <= lunghezza_pwd; i++){
+                pwd += caratteri_pwd.charAt(Math.floor(Math.random() * caratteri_pwd.length)) //Inserisco il carattere preso a casa dalla stinga caratteri
+            }
+            //return pwd
+            console.log(pwd)
+        }
+
+        let casuali = genera_pwd(2) //Richiamo la funzione
+        let casuali2 = genera_pwd(5)
+        let casuali3 = genera_pwd()
+
+        console.log(casuali)
+        console.log(casuali2)
+        console.log(casuali3)
+
+        //Funzione per trovare il minino in un array
+        let ar = [12,3,7,2,1]
+        let numeri = [-3,4,3,12]
+        
+        function min_ar(ar){
+            let min = ar[0]
+            //foreach el con il for ar[i]
+            ar.forEach(el =>{
+                console.log(el)
+                if(el < min){
+                    min = el
+                }
+            })
+            return min
+        }
+
+        let min_num = min_ar(numeri)
+        let mini_ar = min_ar(ar)
+
+        if(min_num < mini_ar){
+            console.log("l'ar numeri ha il numero più basso " + min_num)
+        }else{
+            console.log("l'ar ar ha il numero più basso " + mini_ar)
+        }
+        
+
+
+
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>
