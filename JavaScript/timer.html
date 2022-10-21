@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fine {
+            color: white;
+            background-color: brown;
+        }
+
+        .fine2 {
+            color: brown;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Timer</h2>
+    <div>
+        Inizio: <input type="text" id="inizio" value="1">
+        Fine: <input type="text" id="fine" value="1">
+        <button id="btn_start">Start</button><button id="btn_stop">Stop</button>
+    </div>
+    <p id="timer"></p>
+    <script>
+        const timer = document.querySelector("#timer")
+        const btn_stop = document.querySelector("#btn_stop")
+        const btn_start = document.querySelector("#btn_start")
+        const inizio = document.querySelector("#inizio")
+        const fine = document.querySelector("#fine")
+        
+
+        //dichiarare tuttle le variabile globali (Cioè le variabili visibili da tutte le funzioni)
+        let f, t, sec_to_date
+
+        btn_start.addEventListener("click", () => {
+            timer.innerHTML = "" //Settare la scritta in timer a vuoto
+            timer.className = "" //setto la classe di timer a vuoto
+            let inizio_s = Number(inizio.value) //Cast di inizio
+            let fine_s = Number(fine.value) //Cast di fine
+            if(inizio_s > fine_s){ //Inizio Timer
+                t = window.setInterval(() => {
+                    sec_to_date = new Date(inizio_s * 1000).toISOString().slice(14, 19)
+                    timer.innerHTML = (sec_to_date)
+                    inizio_s--
+                    if (inizio_s < fine_s) {
+                        clearTimeout(t)
+
+                        f = window.setInterval(() => {
+                            timer.innerHTML = "Fine Tempo"
+                            if (timer.className == "fine2") {
+                                timer.className = "fine"
+                            } else {
+                                timer.className = "fine2"
+                            }
+                        }, 1000)
+                    }
+                }, 1000)
+            }else{//Inizio Cronometro
+                t = window.setInterval(()=>{
+                    sec_to_date = new Date(inizio_s * 1000).toISOString().slice(14, 19)
+                    timer.innerHTML = (sec_to_date)
+                    inizio_s++
+                    if (inizio_s > fine_s) {
+                        clearTimeout(t)
+
+                        f = window.setInterval(() => {
+                            timer.innerHTML = "Fine Tempo"
+                            if (timer.className == "fine2") {
+                                timer.className = "fine"
+                            } else {
+                                timer.className = "fine2"
+                            }
+                        }, 1000)
+                    }
+                }, 1000)
+            }
+
+
+        })
+
+        btn_stop.addEventListener("click", () => {
+            clearTimeout(f)
+            clearTimeout(t)
+        })
+
+    </script>
+</body>
+
+</html>
