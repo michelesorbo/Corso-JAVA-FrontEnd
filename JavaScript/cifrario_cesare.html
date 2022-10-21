@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+		<title>Cifrario di Cesare</title>
+		<style>
+			body {
+				font-family: 'Lato', sans-serif;
+				width: 320px;
+				margin: 10px auto;
+				font-size: 0.9em;
+				padding:0;
+			}
+			h2{
+				text-align:center;
+			}
+			fieldset{
+				margin:0;
+				padding:0 0 0 2px;
+				box-sizing:border-box;
+			}
+			legend{
+				font-weight:700;
+			}
+			label{
+				display:inline-block;
+				width:120px;
+				margin:20px 0 10px;
+			}
+			label:nth-of-type(2){
+				width:70px;
+			}
+			input[type='text']{
+				width: 181px;
+			}
+			#decodifica, #tradotto {
+				border: 1px solid;
+				border-color: #000 #ddd #ddd #000;
+				min-height: 1.5em;
+				width: 234px;
+				display: inline-block;
+				vertical-align: middle;
+				padding-left:5px;
+			}
+			#fallo,#invia{
+				display:block;
+				margin: 10px auto;
+			}
+		</style>
+		<script>
+			document.addEventListener("DOMContentLoaded",function(){
+				var testo = document.querySelector("#testo");
+				var field = document.querySelector("fieldset");
+				var doIt = document.querySelector("#fallo");
+				var decodifica = document.querySelector("#decodifica");
+				var codifica = document.querySelector("#codifica");
+				var tradotto = document.querySelector("#tradotto");
+				var invia =document.querySelector("#invia");
+				
+				doIt.onclick = function(){
+					var daCodificare = testo.value;
+					decodifica.innerHTML = '';
+					for(var i=0; i<daCodificare.length; i++){
+						var carattere = daCodificare.charCodeAt(i) + 3;
+						decodifica.innerHTML += String.fromCharCode(carattere);
+						if(i % 28 == 27){
+							decodifica.innerHTML += "<wbr />";
+						}
+					}
+				}
+				invia.onclick = function(){
+					var daDecodificare = codifica.value;
+					tradotto.innerHTML = '';
+					for(var i=0; i < daDecodificare.length; i++){
+						var carattere = daDecodificare.charCodeAt(i) -3;
+						tradotto.innerHTML += String.fromCharCode(carattere);
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<h2>Cifrario di Cesare</h2>
+		<fieldset>
+			<legend>Codifica</legend>
+			<label for="testo">Immetti il testo da cifrare:</label>
+			<input type="text" id="testo" autofocus />
+			<label for="decodifica">Codificato:</label>
+			<div id="decodifica"></div>
+			<input type="button" id="fallo" value="Codifica" />
+		</fieldset>
+		<fieldset>
+			<legend>Decodifica</legend>
+			<label for="codifica">Immetti il testo da decifrare:</label>
+			<input type="text" id="codifica" autofocus />
+			<label for="tradotto">Tradotto:</label>
+			<div id="tradotto"></div>
+			<input type="button" id="invia" value="Decodifica" />
+		</fieldset>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicurezza Password</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+        :root {
+            --font-style: 'Nunito Sans', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-style);
+            background-color: #45011A;
+            color: white;
+        }
+
+        input {
+            width: 200px;
+            border: 2px solid #E25D52;
+            border-radius: 7px;
+            background-color: #2B0413;
+            box-shadow: 0px 0px 15px #E25D52;
+            padding: 10px;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        input:focus {
+            outline: none !important;
+        }
+
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 200px;
+        }
+
+        .bar_container {
+            width: 200px;
+            height: 5px;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+        }
+
+        #password-length {
+            height: 100%;
+            border-radius: 25px;
+            box-shadow: 0px 0px 15px black;
+        }
+
+        .bad {
+            width: 34%;
+            background-color: red;
+        }
+
+        .good {
+            width: 68%;
+            background-color: orange;
+        }
+
+        .perfect {
+            width: 100%;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="password" id="pwd">
+
+        <div class="bar_container">
+            <div id="password-length"></div>
+
+        </div>
+
+    </form>
+    <script>
+        const pwd = document.querySelector("#pwd")
+        const bar = document.getElementById('password-length');
+
+        pwd.addEventListener("keyup", () => {
+            bar.className = ""
+            if (pwd.value.length < 5) {
+                bar.className = 'bad'
+            } else if (pwd.value.length >= 5 && pwd.value.length < 10) {
+                bar.className = 'good'
+            } else if (pwd.value.length >= 10) {
+                bar.className = 'perfect'
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
