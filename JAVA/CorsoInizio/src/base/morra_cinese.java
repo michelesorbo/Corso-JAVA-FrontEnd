@@ -76,7 +76,11 @@ public class morra_cinese {
 			return 1;
 		}else if(giocata.toLowerCase().equals("sasso") && computer.equals("forbici")) {
 			return 1;
+		}else if(giocata.toLowerCase().equals("carta") && computer.equals("sasso")) {
+			return 1;
 		}else if(giocata.toLowerCase().equals("forbici") && computer.equals("sasso")) {
+			return 2;
+		}else if(giocata.toLowerCase().equals("sasso") && computer.equals("carta")) {
 			return 2;
 		}else {
 			return 2;
