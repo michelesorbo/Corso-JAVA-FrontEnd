@@ -66,22 +66,10 @@ public class morra_cinese {
 		String computer = simboli[rm.nextInt(3)];
 		System.out.println("Computer: " + computer);
 		
-		if(giocata.toLowerCase().equals("carta") && computer.equals("carta")) {
+		if(giocata.toLowerCase().equals(computer)){
 			return 0;
-		}else if(giocata.toLowerCase().equals("sasso") && computer.equals("sasso")) {
-			return 0;
-		}else if(giocata.toLowerCase().equals("forbici") && computer.equals("forbici")) {
-			return 0;
-		}else if(giocata.toLowerCase().equals("forbici") && computer.equals("carta")) {
+		}else if(giocata.toLowerCase().equals("forbici") && computer.equals("carta") || giocata.toLowerCase().equals("sasso") && computer.equals("forbici") || giocata.toLowerCase().equals("carta") && computer.equals("sasso")) {
 			return 1;
-		}else if(giocata.toLowerCase().equals("sasso") && computer.equals("forbici")) {
-			return 1;
-		}else if(giocata.toLowerCase().equals("carta") && computer.equals("sasso")) {
-			return 1;
-		}else if(giocata.toLowerCase().equals("forbici") && computer.equals("sasso")) {
-			return 2;
-		}else if(giocata.toLowerCase().equals("sasso") && computer.equals("carta")) {
-			return 2;
 		}else {
 			return 2;
 		}
