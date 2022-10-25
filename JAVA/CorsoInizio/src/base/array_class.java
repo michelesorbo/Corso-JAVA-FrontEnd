@@ -16,6 +16,7 @@ public class array_class {
 		
 		int[] ra_numeri = {1,58,23,65}; //Array con 4 elementi numerici
 		
+		//Insericsco elementi in array
 		ar[0] = 11;
 		ar[1] = 24;
 		ar[2] = 3;
