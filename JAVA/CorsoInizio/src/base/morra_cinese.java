@@ -62,16 +62,16 @@ public class morra_cinese {
 		
 		String[] simboli = {"carta", "sasso", "forbici"}; //Array delle scelte
 		
+		String computer = simboli[rm.nextInt(3)]; //Scelgo la giocata Randomica del pc
 		
-		String computer = simboli[rm.nextInt(3)];
-		System.out.println("Computer: " + computer);
+		System.out.println("Computer: " + computer); //Stampare a video la giocata del computer
 		
 		if(giocata.toLowerCase().equals(computer)){
-			return 0;
+			return 0; //Pareggio
 		}else if(giocata.toLowerCase().equals("forbici") && computer.equals("carta") || giocata.toLowerCase().equals("sasso") && computer.equals("forbici") || giocata.toLowerCase().equals("carta") && computer.equals("sasso")) {
-			return 1;
+			return 1; //Vittoria
 		}else {
-			return 2;
+			return 2; //Sconfitta
 		}
 			
 	}
