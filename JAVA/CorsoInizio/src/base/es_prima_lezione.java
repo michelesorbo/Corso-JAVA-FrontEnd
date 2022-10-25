@@ -1,11 +1,28 @@
 package base;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class es_prima_lezione {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		Scanner imp = new Scanner(System.in);
+		
+		//int[] ar = new int[3];
+		int[] ar = {1,3,5};
+		
+//		System.out.println(ar.length);
+//		for(int numero: ar) {
+//			System.out.println(numero);
+//		}
+		
+//		for(int i = 0;i<ar.length; i++ ) {
+//			System.out.println(ar[i]);
+//		}
+//		
+		
 		//1° Esercizio
 		//Chiedere all'utente quanti numeri vuole inserire
 		//Chiedere i numeri e ritornare il minore
@@ -33,22 +50,74 @@ public class es_prima_lezione {
 		
 		
 		//1° Esercizio Soluzione (Fare a casa, trasformare tutto in metodo restiruisci_minore)
-		Scanner imp = new Scanner(System.in);
-		int min, n;
-		System.out.println("Quanti numeri vuoi inserire?");
-		int numeri = imp.nextInt();
-		System.out.println("Dammi il primo numero");
-		min = imp.nextInt();
-		for(int i = 2; i<=numeri; i++) {
-			System.out.println("Dammi il "+i+"° numero");
-			n = imp.nextInt();
-			if(n < min) {
-				min = n;
-			}
-		}
+//		int min, n;
+//		System.out.println("Quanti numeri vuoi inserire?");
+//		int numeri = imp.nextInt();
+//		System.out.println("Dammi il primo numero");
+//		min = imp.nextInt();
+//		for(int i = 2; i<=numeri; i++) {
+//			System.out.println("Dammi il "+i+"° numero");
+//			n = imp.nextInt();
+//			if(n < min) {
+//				min = n;
+//			}
+//		}
+//		
+//		System.out.println("Il minore è: "+min);
 		
-		System.out.println("Il minore è: "+min);
+		Random rm = new Random();
+		System.out.println(rm.nextInt(4)+1);
+		
+		int i = 1;
+//		while(i <= 10) {
+//			//Esecuzione
+//			System.out.println(i);
+//			i++;
+//		}
+		int numero, tentativi = 1;
+		int num_indovinare = rm.nextInt(4) + 1;
+		
+		do {
+			System.out.println("Indovina il numero");
+			numero = imp.nextInt();
+			if(numero != num_indovinare) {
+				System.out.println("Errato");
+				tentativi++;
+			}
+			
+		}while(numero != num_indovinare);
+		
+		System.out.println("Indovinato in " + tentativi + " tentativi");
 
+	}
+	
+	public static void morra_cinese(String s1, String s2) { 
+		
+		//1 = Sasso
+		//2 = Carta
+		//3 = Forbice
+		
+		if(s1.equals("sasso") && s2.equals("sasso")) { 
+			System.out.println("Pareggio"); 
+		}else if(s1.equals("sasso") && s2.equals("forbice")) { 
+			System.out.println("Ha vinto sasso"); 
+		}else if(s1.equals("sasso") && s2.equals("carta")) { 
+			System.out.println("Ha vinto carta"); 
+		}else if(s1.equals("carta") && s2.equals("carta")) { 
+			System.out.println("Pareggio"); 
+		} else if(s1.equals("carta") && s2.equals("forbice")) { 
+			System.out.println("Ha vinto forbice"); 
+		} else if(s1.equals("carta") && s2.equals("sasso")) { 
+			System.out.println("Ha vinto carta"); 
+		}else if(s1.equals("forbice") && s2.equals("forbice")) { 
+			System.out.println("Pareggio"); 
+		}else if(s1.equals("forbice") && s2.equals("sasso")) { 
+			System.out.println("Ha vinto sasso"); 
+		}else if(s1.equals("forbice") && s2.equals("carta")) { 
+			System.out.println("Ha vinto forbice"); 
+		} 
+
+		 
 	}
 
 }
