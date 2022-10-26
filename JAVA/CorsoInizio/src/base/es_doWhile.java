@@ -24,7 +24,8 @@ public class es_doWhile {
 		//Fare: La somma dei numeri inseriti
 		//Fare: La media dei numeri inseriti
 		//Fare: La ricerca del numero minimo e del massimo nell'array
-	}
+	
+	} //Fine del metodo MAIN
 	
 	public static void esercizio1() {
 		//Esecuzione dell'esercizio 1
@@ -61,11 +62,11 @@ public class es_doWhile {
 		System.out.println("La vocale o è stata scelta "+ ContaO + " volte");
 		System.out.println("La vocale u è stata scelta "+ ContaU + " volte");
 		
-	}
+	} //Fine del metodo Esercizio1
 	
 	public static void esercizio2() {
 		//Esecuzione
-	}
+	} //Fine del metodo Esercizio2
 	
 	public static void esercizio3() {
 		int[] ar_ran = new int[10]; //Array di 10 elementi vuoto
@@ -78,6 +79,6 @@ public class es_doWhile {
 		for(int el:ar_ran) {
 			System.out.println(el);
 		}
-	}
+	} //Fine del metodo Esercizio3
 
-}
+}//Fine della classe
