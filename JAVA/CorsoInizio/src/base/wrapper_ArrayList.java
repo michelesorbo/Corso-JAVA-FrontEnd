@@ -8,6 +8,8 @@ public class wrapper_ArrayList {
 		// TODO Auto-generated method stub
 
 		int n = 5; //Tipo primitivo sono sempre da considerare
+		
+		//Wrapper Class
 		Integer numero = 5; //int
 		Character carattere = 'a'; //char
 		Double numero_virgola = 5.25; //double
@@ -21,7 +23,6 @@ public class wrapper_ArrayList {
 		alunni.add("Vittorio"); //aggiungo elemnti all'ArrayList
 		alunni.add("Luca");
 		alunni.add("Federico");
-		
 		//Conoscere quanti elimenti ci sono
 		System.out.println(alunni.size());
 		

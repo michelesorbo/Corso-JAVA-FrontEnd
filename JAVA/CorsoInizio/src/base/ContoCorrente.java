@@ -4,17 +4,30 @@ import java.util.ArrayList;
 
 public class ContoCorrente {
 	
-	int saldo;
-	String proprietario;
-	String n_conto;
+	private int saldo;
+	private String proprietario;
+	private String n_conto;
 	String[] movimenti = new String[5];
-	int conta_movimenti = 0;
-	ArrayList<String> movimenti_cc = new ArrayList<String>();
+	private int conta_movimenti = 0;
+	private ArrayList<String> movimenti_cc = new ArrayList<String>();
+	
+	final int COSTANTE = 5; //Dichiaro una costante
+	
+	//Le variabili static servono per condividere valori comuni tra
+	//gli oggetti di una classe.
+	static int numero_cc_aperti = 0;
+	static String nomeBanca = "Banca Lama";
+	
 	
 	ContoCorrente(int saldo_iniziale, String proprietario, String conto){
 		this.saldo = saldo_iniziale;
 		this.proprietario = proprietario;
 		this.n_conto = conto;
+		numero_cc_aperti++;
+	}
+	
+	void setProprietatio(String nome) {
+		proprietario = nome;
 	}
 	
 	void versa(int somma) {
@@ -60,7 +73,7 @@ public class ContoCorrente {
 //		conta_movimenti++;//Incremento il contatore di movimenti
 //	}
 	
-	void movimentiConto(String movimento) {
+	private void movimentiConto(String movimento) {
 		if(movimenti_cc.size() > 4) {
 			movimenti_cc.remove(0);
 			movimenti_cc.add(movimento);

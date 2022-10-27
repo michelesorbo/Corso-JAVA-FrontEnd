@@ -8,7 +8,15 @@ public class ContoCorrente_start {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		ContoCorrente cc1 = new ContoCorrente(50000, "Vittorio Lama", "IT001");
+		ContoCorrente cc2 = new ContoCorrente(15000, "Simone Povero", "IT002");
+		ContoCorrente cc3 = new ContoCorrente(15000, "Errico Povero", "IT003");
 		int scelta, somma;
+		
+		cc2.nomeBanca = "Banca Vittorio";
+		System.out.println(cc2.nomeBanca);
+		System.out.println(cc1.nomeBanca);
+		
+		System.out.println("Numero CC aperti: " + cc1.numero_cc_aperti);
 		
 		do {
 			System.out.println("Benvenuto nella gestione del conto corrente");
