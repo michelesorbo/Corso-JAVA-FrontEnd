@@ -16,15 +16,20 @@ public class operazioni_start {
 		int[] ar_num = new int[10];
 		int[] ar2 = new int[3];
 		
+		
+		String[] str = new String[5];
+		
+		System.out.println(str.length);
 		//System.out.println(ar_num.length);
-		ar_num = op1.riempi_ar(ar_num);
-		ar2 = op2.riempi_ar(ar2);//Riempire l'array
+//		ar_num = op1.riempi_ar(ar_num);
+//		ar2 = op2.riempi_ar(ar2);//Riempire l'array
+//		
+//		
+//		op2.stampa_ar(ar_num); //Stampo l'array
+//		
+//		op2.stampa_maggiore(ar_num);
 		
-		
-		op2.stampa_ar(ar_num); //Stampo l'array
-		
-		op2.stampa_maggiore(ar_num);
-		
+		op1.lista_movimenti();
 
 	}
 
