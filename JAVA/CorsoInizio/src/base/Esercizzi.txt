@@ -64,3 +64,36 @@ utomaticamente uno sconto del 20%
 Realizzare una classe ListaSpesa che chieda all'utente di inserire i prodotti 
 acquistati e calcoli il totale della spesa applicando gli opportuni sconti se il 
 cliente ha la tessera fedeltà.
+
+Esercizio 5 (Try Catch)
+Scrivi un programma che inserito un numero intero da tastiera stampi a video il risultato 
+della divisione di tale numero per un altro numero generato casualmente, 
+compreso fra 0 e 3, intercettando l'eventuale eccezione della divisione per 0.
+
+Esercizio 5 bis
+Scrivi un programma che istanziato un vettore di interi di 5 posizioni chieda 
+all'utilizzatore di inserire un numero in una posizione specificata; 
+gestire l'eventualità che vengano violati i limiti dell'array .
+Stampare a video l'array
+
+
+Esercizio 6 (Interfacce)
+Scrivi un programma che sia in grado di istanziare degli oggetti 'distributori di benzina' 
+di cui sia nota la città, il proprietario, la capacità e la benzina attualmente contenuta nel 
+distributore. Dell'oggetto Distributore, deve essere possibile simulare le operazioni di 
+erogazione del carburante e dei corrispondenti incassi. Implementa una interfaccia Comparable, 
+in modo da consentire il confronto tra 2 distributori in base alla capacità del serbatoio 
+di carburante.
+
+EXTRA{
+- Scegli la pompa da gestire
+(Dopo aver inserito la pompa da gestire faccio uscire il nuovo menu)
+}
+
+
+1) Rifornimento
+2) Rifornimento Pompa (Far vedere quanti litri sono presenti ancora nella pompa 
+						e chiedere quanti litri aggiungere)
+3) Calcolo Incasso giornaliero
+4) Comparazione
+

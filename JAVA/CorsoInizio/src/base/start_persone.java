@@ -11,17 +11,17 @@ public class start_persone {
 		
 		a1.muovi();
 		a1.ferma();
-		a1.saluto();
 		
 		p1.eta();
 		p2.eta();
 		p3.eta();
 		
-		p3.eta = 19; //Sbagliata ma per ora va bene si fa con i metodi get e set
+		//p3.eta = 19; //Sbagliata ma per ora va bene si fa con i metodi get e set
+		p3.setEta(19);
 		
 		p3.eta();
 		
-		p1.nome = "Mauro";
+		//p1.nome = "Mauro";
 		
 		p1.saluta();
 	

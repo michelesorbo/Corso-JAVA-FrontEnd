@@ -10,4 +10,5 @@ public abstract class veicolo {
 		System.out.println("Saluta");
 	}
 	
+	
 }
