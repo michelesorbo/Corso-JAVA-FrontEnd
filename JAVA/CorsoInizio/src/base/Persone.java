@@ -14,11 +14,11 @@ public class Persone {
 		this.citta = citta;
 	}
 	
-	void saluta() {
+	public void saluta() {
 		System.out.println("Piacere sono " + nome);
 	}
 	
-	void getEta() {
+	public void getEta() {
 		System.out.println("Ho " + eta);
 	}
 }

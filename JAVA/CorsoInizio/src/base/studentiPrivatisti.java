@@ -10,12 +10,12 @@ public class studentiPrivatisti extends Studenti {
 	}
 	
 	@Override
-	void saluta() {
+	public void saluta() {
 		System.out.println("Sono lo studente privatista " + nome);
 	}
 	
 	@Override
-	void getEta() {
+	public void getEta() {
 		System.out.println("non ti voglio dire la mia età");
 	}
 
