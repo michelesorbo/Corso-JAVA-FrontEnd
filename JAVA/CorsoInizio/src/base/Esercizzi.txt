@@ -97,3 +97,11 @@ EXTRA{
 3) Calcolo Incasso giornaliero
 4) Comparazione
 
+
+Esercizio 7: Gestione File
+Creare un programma che crei una lista di clienti di un negozio.
+Il programma deve chiedere se inserire un nuovo cliente nel file o se si vuole leggere
+la lista dei clienti presenti nel file.
+Ad ogni inseriemnto oltre il nome del cliente vado a ricorda anche la data con Ora e munuto 
+dell'inserimento. Nome del file Clienti.txt
+

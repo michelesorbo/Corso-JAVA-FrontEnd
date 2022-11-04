@@ -29,9 +29,13 @@ public class GestioneDelleDate {
 		DateTimeFormatter it_format_mese = DateTimeFormatter.ofPattern("dd - MMMM - yyyy");
 		System.out.println("Data in formato italiano " + data.format(it_format_mese));
 		
-		//Faccio scrivere il mese con il nume del mese
+		//Faccio scrivere il giorno con il nome
 		DateTimeFormatter it_format_giorno = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
 		System.out.println("Data in formato italiano " + data.format(it_format_giorno));
+		
+		//Faccio scrivere il mese con il nume del mese
+		DateTimeFormatter it_format_ora = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy - HH:mm");
+		System.out.println("Data in formato italiano " + data_completa.format(it_format_ora));
 		
 	}
 
