@@ -1,2 +1,4 @@
 Ciao sono JAVA e ho cancellato il contenuto del file
-Sono Vittorio e sono ritornato
+Sono Vittorio e sono ritornatoProva di Append
+Prova di Append
+Prova di Append
