@@ -1,6 +1,8 @@
 package lezione04;
 
 import java.io.File;
+//import java.time.LocalDateTime;
+//import java.time.format.DateTimeFormatter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -34,11 +36,16 @@ public class Esercizio_7 {
 			
 		}while(scelta != 0);
 		
+		System.out.println("Chiusura del programma tutti i dati sono stati salvati sul file");
 		
 
 	}
 	
 	public static void scrivi(String testo) {
+		
+//		LocalDateTime data = LocalDateTime.now();
+//		DateTimeFormatter it_format_ora = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy - HH:mm");
+		
 		String path = "clienti.txt";
 		
 		try {

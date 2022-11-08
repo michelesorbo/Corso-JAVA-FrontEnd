@@ -1,0 +1,107 @@
+Esercizio 1:
+Classe operazioni dotata di un costruttore che prende due numeri a e b e 
+quattro metodi che simulano le 4 operazioni.
+metodo pow() che stampi a video la potenza di base (ossia stampa il prodotto di base*base),
+
+
+Esercizio 2:
+Creare una classe ContoCorrente in grado di simulare un conto corrente reale, 
+quindi con versamenti, prelievi, stampa saldo e dammi la lista degli ultimi 5 movimenti.
+Costruttore: Saldo iniziale, Proprietario, N° Conto
+
+Far partire una schermata con le opzioni es:
+Benvenuto nel tuo conto
+1) Versa
+2) Preleva
+3) Saldo Attuale
+4) Ultimi 5 movimenti
+5) Info Conto (Restituisce Proprietario e N° Conto)
+0) Esci
+
+
+Esercizio 3:
+E' necessario scrivere una applicazione che simula il funzionamento di un frammento del sistema 
+informativo di un operatore di telefonia cellulare.
+
+Si devono quindi rappresentare i dati relativi ad una carta SIM ed in particolare:
+- il numero di telefono
+- il credito disponibile in euro
+- la lista delle telefonate effettuate
+
+Per ciascuna telefonata deve essere rappresentata la durata in minuti
+
+La classe SIM dovrà fornire le seguenti funzionalità:
+- un costruttore parametrizzato che crea una SIM con numero di telefono, un credito e 
+la lista delle telefonate vuota
+
+- un metodo per l'inserimento di una telefonata con i dati forniti dall'utente.
+
+- una funzione per il calcolo dei minuti totali di conversazione.
+
+- una funzione per il calcolo delle telefonate effettuate verso un certo numero SE RIUSCITE
+
+- una procedura per la stampa dei dati della SIM e l'elenco delle telefonate.
+
+
+Esercizio 4 (Ereditarietà):
+Il gestore di un negozio associa a tutti i suoi Prodotti un codice a barre univoco, 
+una descrizione sintetica del prodotto e il suo prezzo unitario. 
+Realizzare una classe Prodotti con le opportune variabili d'istanza e metodi get e set.
+
+Aggiungere alla classe Prodotti un metodo applicaSconto che modifica il prezzo del 
+prodotto diminuendolo dello sconto inserito come parametro (es 5%).
+
+Il gestore del negozio vuole fare una distinzione tra i prodotti Alimentari e quelli 
+Non Alimentari. 
+Ai prodotti Alimentari viene infatti associata una data di scadenza, 
+mentre a quelli Non Alimentari il materiale principale di cui sono fatti. 
+Realizzare le sottoclassi Alimentari e NonAlimentari estendendo opportunamente 
+la classe Prodotti.
+
+Sovrascrivere il metodo applicaSconto per i prodotti Alimentari che applicca 
+utomaticamente uno sconto del 20%
+
+Realizzare una classe ListaSpesa che chieda all'utente di inserire i prodotti 
+acquistati e calcoli il totale della spesa applicando gli opportuni sconti se il 
+cliente ha la tessera fedeltà.
+
+Esercizio 5 (Try Catch)
+Scrivi un programma che inserito un numero intero da tastiera stampi a video il risultato 
+della divisione di tale numero per un altro numero generato casualmente, 
+compreso fra 0 e 3, intercettando l'eventuale eccezione della divisione per 0.
+
+Esercizio 5 bis
+Scrivi un programma che istanziato un vettore di interi di 5 posizioni chieda 
+all'utilizzatore di inserire un numero in una posizione specificata; 
+gestire l'eventualità che vengano violati i limiti dell'array .
+Stampare a video l'array
+
+
+Esercizio 6 (Interfacce)
+Scrivi un programma che sia in grado di istanziare degli oggetti 'distributori di benzina' 
+di cui sia nota la città, il proprietario, la capacità e la benzina attualmente contenuta nel 
+distributore. Dell'oggetto Distributore, deve essere possibile simulare le operazioni di 
+erogazione del carburante e dei corrispondenti incassi. Implementa una interfaccia Comparable, 
+in modo da consentire il confronto tra 2 distributori in base alla capacità del serbatoio 
+di carburante.
+
+EXTRA{
+- Scegli la pompa da gestire
+(Dopo aver inserito la pompa da gestire faccio uscire il nuovo menu)
+}
+
+
+1) Rifornimento
+2) Rifornimento Pompa (Far vedere quanti litri sono presenti ancora nella pompa 
+						e chiedere quanti litri aggiungere)
+3) Calcolo Incasso giornaliero
+4) Comparazione
+
+
+Esercizio 7: Gestione File
+Creare un programma che crei una lista di clienti di un negozio.
+Il programma deve chiedere se inserire un nuovo cliente nel file o se si vuole leggere
+la lista dei clienti presenti nel file.
+Ad ogni inseriemnto oltre il nome del cliente vado a ricorda anche la data con Ora e munuto 
+dell'inserimento. Nome del file Clienti.txt
+
