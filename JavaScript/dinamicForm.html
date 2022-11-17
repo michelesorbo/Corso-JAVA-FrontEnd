@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamic Form</title>
+    <style>
+        body {
+            background-color: #2A2734;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        label {
+            width: 211px;
+            height: 34px;
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFB870;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        
+        input {
+            box-sizing: border-box;
+            width: 326px;
+            height: 35px;
+            background: #9A86FD;
+            border: 1px solid #000000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+            transition: all 0.5s;
+            padding-left: 5%;
+            color: white;
+        }
+        
+        input:focus {
+            outline: none;
+            box-shadow: 0px 0px 15px #FFB870;
+        }
+        
+        button {
+            display: none;
+            width: 40px;
+            height: 100%;
+            background: #9A86FD;
+            border-radius: 25px;
+            color: white;
+            border: 0;
+            margin-left: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            transition: all 0.5s;
+        }
+        
+        button:hover {
+            box-shadow: 0px 0px 15px #FFB870;
+        }
+        
+        .container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            height: 30px;
+        }
+        
+        .valid {
+            display: block;
+            animation: valid 1s forwards;
+        }
+        
+        .fa-spinner {
+            width: 20px;
+            font-size: large;
+            margin: auto;
+            color: #FFB870;
+            animation: spin 2s infinite;
+        }
+        
+        #check {
+            display: none;
+            width: 20px;
+            font-size: large;
+            margin: auto;
+            color: green;
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes valid {
+            from {
+                width: 40px;
+            }
+            to {
+                width: 100px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <form method="POST" onSubmit="{registerUser}">
+        <label for="username ">Username</label>
+        <input type="text " id='username' name='username' autocomplete='off'>
+
+        <label for="password ">Password</label>
+        <input type='password' id='password' name='password' autocomplete='off'>
+
+        <div class="container ">
+            <button type='submit' id='connect' class="button type3 ">
+                <span>Connect</span> 
+              </button>
+            <i class="fa fa-spinner " id='spinner' aria-hidden="true "></i>
+            <i class="fa fa-check " id='check' aria-hidden="true "></i>
+
+        </div>
+
+
+    </form>
+
+    <script>
+        const username = document.getElementById('username')
+        const password = document.getElementById('password')
+        const check = document.getElementById('check')
+        const spinner = document.getElementById('spinner')
+        const button = document.getElementById('connect')
+
+        var username_valid = false;
+        var password_valid = false;
+
+        username.oninput = function() {
+            if (this.value.length > 4) {
+                username_valid = true
+            } else {
+                username_valid = false
+            }
+            form_valid(username_valid, password_valid)
+        }
+
+        password.oninput = function() {
+            if (this.value.length > 8) {
+                password_valid = true
+            } else {
+                password_valid = false
+            }
+
+            form_valid(username_valid, password_valid)
+        }
+
+        function form_valid(username_valid, password_valid) {
+            if (username_valid && password_valid) {
+                spinner.style.display = 'none'
+                check.style.display = 'block'
+
+                button.classList.add('valid')
+                check.classList.add('up')
+
+
+            } else {
+                spinner.style.display = 'block'
+                check.style.display = 'none'
+                button.classList.remove('valid')
+
+                check.classList.remove('up')
+
+            }
+        }
+    </script>
+    
+</body>
+</html>l
