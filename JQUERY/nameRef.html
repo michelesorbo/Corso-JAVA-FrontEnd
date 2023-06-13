@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        How to check a radio
+        button with jQuery?
+    </title>
+      
+    <script src=
+        "https://code.jquery.com/jquery-2.2.4.min.js">
+    </script>
+</head>
+  
+<body>
+    <h1 style="color: green">
+        GeeksForGeeks
+    </h1>
+    <b>jQuery Check/Uncheck Radio Button</b>
+    <p>
+        <input type="radio" name="option" id="free">
+            Free Membership
+        <input type="radio" name="option" id="premium">
+            Premium Membership
+    </p>
+      
+    <p>
+          
+        <button type="button" class="reset">
+            Reset options
+        </button>
+
+        <button type="button" id="ok" class="ok">Pulsante opzione</button>
+    </p>
+      
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log($(':radio[name="option"]:checked').length)
+
+            $("#ok").attr("disabled", true);
+
+            $('input[type=radio][name=option]').change(function() {
+                //alert($(':radio[name="option"]:checked').length);
+                $("#ok").attr("disabled", false);
+            });
+            
+            
+            $(".reset").click(function () {
+                $("#free").attr("checked", false);
+                $("#premium").attr("checked", false);
+                $("#ok").attr("disabled", true);
+            });
+
+        });
+    </script>
+</body>
+  
+</html> 
