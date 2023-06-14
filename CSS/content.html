@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regola content</title>
+    <style>
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li{
+            padding-left: 16px;
+        }
+
+        li::before{
+            /*content: '-';*/
+            content: url('img/joypad.png');
+            color: blue;
+            padding-right: 8px;
+        }
+
+        .topic{
+            background-color: cadetblue;
+        }
+
+        .topic::after{
+            content: url('img/star.png');
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>La proprietà content</h1>
+
+    <ul>
+        <li>Caffè</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+
+    <p class="topic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, provident, assumenda praesentium laboriosam nulla sequi iste non, culpa recusandae tenetur quos illo quo fugiat delectus labore eveniet laborum. Possimus, quo.</p>
+
+</body>
+</html>
