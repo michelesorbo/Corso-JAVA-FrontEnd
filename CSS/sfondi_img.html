@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immagini</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100%;
+            height: 200px;
+            border: solid 2px rgb(255,254,254);
+        }
+
+        /*BG Classico*/
+        .bg_color{
+            background-color: salmon;
+        }
+
+        /*BG con Gradiente*/
+        /* Sito per generare i gradienti https://cssgradient.io/ */
+        .bg_gradiente{
+            background: rgb(178,254,255);
+            background: linear-gradient(193deg, rgba(178,254,255,0.7931766456582633) 0%, rgba(138,95,3,0.7315519957983193) 100%);
+        }
+
+        /*BG con immagine */
+        .bg_image{
+            background-image: url(img/star.png);
+            background-size: 60px;
+            background-repeat: space;
+            background-position: center;
+        }
+
+        .bg_attach{
+            background-image: url(https://www.chimerarevo.com/wp-content/uploads/2020/06/Sfondi-4K-PC.jpg);
+            height: 2000px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: #021435;
+        }
+    </style>
+</head>
+<body class="bg_attach">
+    <div class="box"></div>
+    <div class="box bg_color"></div>
+    <div class="box bg_gradiente"></div>
+    <div class="box bg_image"></div>
+</body>
+</html>
