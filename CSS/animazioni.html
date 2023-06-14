@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni CSS</title>
+
+    <style>
+        .an_slidein{
+            animation-duration: 3s; /*Durata dell'animazione */
+            animation-name: slidein; /* Nome da dare al KEYFRAMES*/
+            animation-iteration-count: 4; /*Numero di ripetizione dell'animazione (infinite per loop)*/
+            animation-direction: alternate;
+        }
+        /*Creare le regole di animazione */
+        @keyframes slidein{
+            from{
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            75%{
+                font-size: 300%;
+                margin-left: 25%;
+                width: 150%;
+            }
+
+            to{
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        /*Animazione Typing */
+
+        .typerwrite{
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap; /* Blocco il testo su una linea */
+            margin: 0 auto;
+            letter-spacing: .15em; /*Aggiusto lo spazio se è necessario */
+            animation-duration: 10s;
+            animation: 
+                typing 10.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* Typing effect */
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+
+            to{
+                width: 100%;
+            }
+        }
+
+        /*Effetto cursore */
+        @keyframes blink-caret {
+            from, to{
+                border-color: transparent;
+            }
+            50%{ border-color: orange;}
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <p class="an_slidein">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, odit excepturi. Sequi totam ipsum similique dolor reprehenderit ab. Quisquam nobis fugit aperiam necessitatibus ullam sequi corporis quibusdam vel quam reprehenderit.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga optio fugiat accusantium, id perferendis tempore hic accusamus natus asperiores illo, minima magni provident dolore culpa numquam consectetur ipsam, obcaecati consequuntur!
+    </p> -->
+    <p class="typerwrite">Ciao mi chiamo Katia</p>
+    
+</body>
+</html>

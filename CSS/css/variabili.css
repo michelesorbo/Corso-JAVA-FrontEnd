@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+
+/* @import url('regole.css'); */
+
+:root{
+    --colore-testo: #fff;
+    --font-titoli: font-family: 'Raleway', sans-serif;
+    --font-paragrafi: font-family: 'Raleway', sans-serif;
+    --main-bg-color: #EB2126;
+    --main-bg-body: #4B4B6B;
+    --colore-principale: #cacaca;
+}
+
+.titoloPrincipale{
+    color: #38A0EB;
+}
+
+.sottotiloDue{
+    color: #38A0EB;
+}
+
+
+body{
+    background-color: var(--main-bg-body);
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: var(--main-bg-color);
+    font-family: var(--font-paragrafi);
+    color: var(--colore-testo);
+}
+
+
+.titolo{
+    font-family: var(--font-titoli);
+    color: var(--colore-testo);
+}
+
+p{
+    font-size: 15px;
+    color: var(--colore-testo);
+}
+

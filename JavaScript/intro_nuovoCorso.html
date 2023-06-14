@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro JS</title>
+</head>
+<body>
+    <!--JAVASCRIPT va sempre inserito alla fine della pagina prima di </body> e controlla gli elementi della pagina-->
+    
+    <h1 class="" id="titolo">Sono h1</h1>
+    <h1 id="titolo2">Sono titolo 2</h1>
+    <p class="par">sono p</p>
+    <button id="btn">Faccio scomparire il secondo titolo</button>
+
+    <script>
+        //Selezionare i tag dal documento HTML
+        const titolo = document.getElementById("titolo") //Vecchio metodo
+        const titolo2 = document.querySelector("#titolo2");//Nuovo metodo per selezionare tag con id
+        const par = document.querySelector(".par");//Nuovo metodo per selezionare tag con class
+        const paragrafo = document.querySelector("p"); //Seleziono il tag p
+        const btn = document.querySelector("#btn");
+
+        titolo2.innerHTML = "Ciao da JS"
+
+        btn.addEventListener("click", ()=>{
+            titolo2.style.display = "none";
+        })
+
+    </script>
+</body>
+</html>
