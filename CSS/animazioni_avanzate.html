@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni Avanzate</title>
+    <!-- https://bfotool.com/it/css-animation -->
+    <style>
+        .effetto1{
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+            /* Setto le impostazioni di transizione*/
+            /* transition-property: width; */
+           /* transition-delay: 1s;  il ritardo della partenza */
+            /* transition-duration: 4s; /* tempo per completare l'effetto */
+            /* transition-timing-function: ease-out; */
+            /* Fine impostazioni */
+
+            /* transition: width 4s ease-out 1s; */
+            transition: 4s ease-out 1s width;
+
+            border: solid 2px #000;
+            border-radius: 5px 25px;
+            padding: 10px;
+        }
+
+        .effetto1:hover{
+            width: 400px;
+        }
+
+        .effetto_3d{
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+            transform: rotate(70deg);
+            transform-origin: 60% 80%;
+        }
+
+        .quadrato1{
+            background: #00aa9d;
+            border-radius: 3px;
+            margin: 100px;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            transition: transform 0.8s;
+        }
+
+        .quadrato2{
+            background: #2b3f53;
+            border-radius: 3px;
+            margin: 100px;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            transition: transform 0.8s;
+
+            /* &:hover{
+                transform: translate(20px, 20px);
+            } */
+        }
+
+        .quadrato2:hover{
+            transform: translate(20px, 20px); /* asse x, asse y, asse z*/
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="effetto1">sono div</div>
+    <p class="effetto1">Sono p</p>
+    <div class="effetto_3d">Sono effetto 3d</div>
+
+    <div>
+    <div class="quadrato1"></div>
+    <div class="quadrato2"></div>
+
+
+</body>
+</html>
