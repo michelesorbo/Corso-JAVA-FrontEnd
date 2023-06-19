@@ -57,12 +57,15 @@
 				var codifica = document.querySelector("#codifica");
 				var tradotto = document.querySelector("#tradotto");
 				var invia =document.querySelector("#invia");
+				var key_cif = document.querySelector("#key_cif");
 				
+				console.log(key_cif.value)
+
 				doIt.onclick = function(){
 					var daCodificare = testo.value;
 					decodifica.innerHTML = '';
 					for(var i=0; i<daCodificare.length; i++){
-						var carattere = daCodificare.charCodeAt(i) + 3;
+						var carattere = daCodificare.charCodeAt(i) + Number(key_cif.value);
 						decodifica.innerHTML += String.fromCharCode(carattere);
 						if(i % 28 == 27){
 							decodifica.innerHTML += "<wbr />";
@@ -73,7 +76,7 @@
 					var daDecodificare = codifica.value;
 					tradotto.innerHTML = '';
 					for(var i=0; i < daDecodificare.length; i++){
-						var carattere = daDecodificare.charCodeAt(i) -3;
+						var carattere = daDecodificare.charCodeAt(i) - Number(key_cif.value);
 						tradotto.innerHTML += String.fromCharCode(carattere);
 					}
 				}
@@ -82,6 +85,8 @@
 	</head>
 	<body>
 		<h2>Cifrario di Cesare</h2>
+		<label for="num_cifre">Immetti la chiave di cifratura:</label>
+		<input type="text" id="key_cif" value="3">
 		<fieldset>
 			<legend>Codifica</legend>
 			<label for="testo">Immetti il testo da cifrare:</label>
