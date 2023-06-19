@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi IF ELSE</title>
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        h3{
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3>Esercizio 1</h3>
+        <p>Scrivi un programma che prenda un numero e stampi sulla console se è positivo, negativo o zero.</p>
+        <button id="btn_es1" class="btn btn-primary">Esegui ES 1</button>
+        
+        <script>
+            const btn_es1 = document.querySelector("#btn_es1")
+            btn_es1.addEventListener("click", () => {
+                let numero = prompt("Inserisci un numero")
+
+                if (numero > 0) {
+                    alert("Il numero è positivo")
+                } else if (numero < 0) {
+                    alert("Il numero è negativo")
+                } else {
+                    alert("Il numero è zero")
+                }
+            })
+        </script>
+
+        <h3>Esercizio 2</h3>
+        <p>
+            Scrivi un programma che prenda un numero e stampi sulla console se è pari o dispari.<br>
+            <code>
+            Operazione modulo 4%2 = 0, 5%2 = 1<br>
+            if(4%2 == 0){<br>
+            alert("numero pari")<br>
+            }else{<br>
+            alert("Numero dispari")<br>
+            }
+        </code></p>
+        <button id="btn_es2" class="btn btn-primary">Esegui ES 2</button>
+        
+        <script>
+            const btn_es2 = document.querySelector("#btn_es2")
+
+            btn_es2.addEventListener("click", () => {
+                let numero = prompt("Inserisci un numero")
+
+                if (numero % 2 === 0) {
+                    alert("Il numero è pari");
+                } else {
+                    alert("Il numero è dispari");
+                }
+            })
+        </script>
+        <h3>Esercizio 3</h3>
+        <p>Scrivi un programma che prenda l'età di una persona e stampi sulla console se può guidare.</p>
+        <button id="btn_es3" class="btn btn-primary">Esegui ES 3</button>
+        <script>
+            const btn_es3 = document.querySelector("#btn_es3")
+
+            btn_es3.addEventListener("click", () => {
+                const eta = prompt("Inserisci la tua età");
+
+                if (eta >= 18) {
+                    alert("Puoi guidare");
+                } else {
+                    alert("Non puoi guidare");
+                }
+            })
+        </script>
+
+        <h3>Esercizio 4</h3>
+        <p>Scrivi un programma che prenda il punteggio di uno studente in input e stampi sulla console il suo livello (A, B, C, D). A parte da 90 punti, B ne richiede minimo 80 e C 70 punti.</p>
+        <button id="btn_es4" class="btn btn-primary">Esegui ES 4</button>
+        
+        <script>
+
+            const btn_es4 = document.querySelector("#btn_es4")
+
+            btn_es4.addEventListener("click", () => {
+
+                let punteggio = prompt("Inserisci punteggio");
+
+                if (punteggio >= 90) {
+                    alert("Livello A");
+                } else if (punteggio >= 80) {
+                    alert("Livello B");
+                } else if (punteggio >= 70) {
+                    alert("Livello C");
+                } else {
+                    alert("Livello D");
+                }
+            })
+        </script>
+
+
+
+    </div>
+
+
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
