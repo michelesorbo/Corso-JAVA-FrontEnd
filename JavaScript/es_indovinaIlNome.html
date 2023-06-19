@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indovina il Nome</title>
+</head>
+
+<body>
+
+    <h1>Indovina il nome</h1>
+    <p>sto pensando ad una serie di nomi, inserisci un nome e veidmao se è nella mia lista</p>
+    <input type="text" id="input">
+    <button id="btn">Invia</button>
+    <p id="par">Risulatao</p>
+
+    <script>
+        const par = document.querySelector("#par") //Punto il tag con id par
+        const btn = document.querySelector("#btn") //Punto il tag con id btn
+        const input = document.querySelector("#input") //Punto il tag con id btn
+
+        let nomi = "michele ivan william"
+
+        btn.addEventListener("click", () => {
+            if (nomi.includes(input.value.toLowerCase().trim())) {
+                par.innerHTML = "Bravo stavo pensando proprio questo nome"
+            } else {
+                par.innerHTML = "No non lo conosco e non lo stavo pensando"
+            }
+        })
+    </script>
+
+</body>
+
+</html>

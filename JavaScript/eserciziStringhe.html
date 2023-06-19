@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi Stringhe</title>
+    <!--Bootstra CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        h3{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>Esercizio 1</h3>
+    <p>Scrivere un programma SpezzaMeta che chiede all’utente di inserire una stringa e stampa tale stringa divisa a metà su due righe (se la lunghezza della stringa è dispari una delle due parti sarà più lunga dell’altra di un carattere)</p>
+    <button id="btn_es1" class="btn btn-primary">Esercizio 1</button>
+    <script>
+        const btn_es1 = document.querySelector("#btn_es1")
+
+        btn_es1.addEventListener("click", ()=>{
+            let parola = prompt("Inserisci una parola")
+            alert(parola.slice(0, parola.length/2) + "\n"+parola.slice(parola.length/2))
+        })
+    </script>
+
+<h3>Esercizio 2</h3>
+<p>Scrivere un programma DomandaRisposta che chiede all’utente di inserire una stringa, ricava l’ultimo carattere di tale stringa e: 
+    <ul>
+        <li>se tale carattere è un punto interrogativo (?) stampa: Non saprei...</li>
+        <li>se tale carattere è un punto esclamativo (!) stampa: Hai proprio ragione!</li>
+        <li>altrimenti stampa Mmmm, non mi convince...</li>
+    </ul>
+</p>
+<button id="btn_es2" class="btn btn-primary">Esercizio 2</button>
+<script>
+    const btn_es2 = document.querySelector("#btn_es2")
+
+    btn_es2.addEventListener("click", ()=>{
+        let parola = prompt("Inserisci una parola")
+        if(parola.charAt(parola.trim().length-1) == '?'){
+            alert("Non saprei...")
+        }else if(parola.charAt(parola.trim().length-1) == '!'){
+            alert("Hai proprio ragione!")
+        }else{
+            alert("Mmmm, non mi convince...")
+        }
+    })
+</script>
+
+<h3>Esercizio 3</h3>
+<p>
+    Prendere in input due semplici stringhe che contengono una sola parola, dopo restituire le due stringhe concatenate, scambiando i primi due caratteri di ciascuna stringa.
+    nessuna delle 2 stringhe deve essere minore di 3 caratteri
+</p>
+<button id="btn_es3" class="btn btn-primary">Esercizio 3</button>
+<script>
+    const btn_es3 = document.querySelector("#btn_es3")
+
+    btn_es3.addEventListener("click", ()=>{
+        let parola1 = prompt("Inserisci la prima parola")
+        let parola2 = prompt("Inserisci la seconda parola")
+        /*
+        parola1 = Nanno
+        parola2 = Coro
+        Esempio 1
+        sostituire la seconda lettera della 1 con la seconda lettera della 2
+
+        Esempio 2
+        Sostituisco le prime due lettere di ogni parola tra di loro
+        aNnno - oCro
+
+        */
+       //Esempio 1
+        //alert(parola1.charAt(0)+parola2.slice(1,2)+parola1.slice(2)+ " " + parola2.charAt(0)+parola1.slice(1,2)+parola2.slice(2))
+
+        //Esempio 2
+        alert(parola1.charAt(1)+parola1.charAt(0)+parola1.slice(2) + " " + parola2.charAt(1)+parola2.charAt(0)+parola2.slice(2))
+    })
+
+</script>
+
+</div>
+<!-- Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
