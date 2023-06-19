@@ -105,6 +105,56 @@
             })
         </script>
 
+        <h3>Esercizio 5</h3>
+        <p>
+            Scrivere un programma che prenda in input 3 numeri e ritorni il numero maggiore<br>
+            Es n1 = 6, n2 = 8, n3 =2<br>
+            Il maggiore è n2
+        </p>
+        <button id="btn_es5" class="btn btn-primary">Esegui ES 5</button>
+
+        <script>
+
+            const btn_es5 = document.querySelector("#btn_es5")
+
+            btn_es5.addEventListener("click", () => {
+                let n1 = +prompt("Inserisci il primo numero") //Forzo la tipologia a Number
+                let n2 = +prompt("Inserisci il secondo numero") //Forzo la tipologia a Number
+                let n3 = +prompt("Inserisci il terzo numero") //Forzo la tipologia a Number
+
+                if(n1 > n2 && n1 > n3){
+                    alert(n1 + " è maggiore")
+                }else if(n2 > n1 && n2 > n3){
+                    alert(n2 + " è maggiore")
+                }else{
+                    alert(n3 + " è maggiore")
+                }
+
+            })
+        
+        </script>
+
+        <h3>Esercizio 6</h3>
+        <p>
+            Calcolare se un dipendente può ricevere un premio di produzione.
+            Si riceve il premio se il fatturato è > 20000€ o se ha più di 15 anni di servizio
+        </p>
+        <button id="btn_es6" class="btn btn-primary">Esegui ES 6</button>
+
+        <script>
+            const btn_es6 = document.querySelector("#btn_es6")
+
+            btn_es6.addEventListener("click", ()=>{
+                let fatturato = +prompt("Inserisci il tuo fatturato")
+                let anniServizio = +prompt("Inserisci i tuoi anni di servizio")
+
+                if(fatturato > 20000 || anniServizio > 15){
+                    alert("Hai diritto al premio")
+                }else{
+                    alert("Prova l'anno prossimo")
+                }
+            })
+        </script>
 
 
     </div>
