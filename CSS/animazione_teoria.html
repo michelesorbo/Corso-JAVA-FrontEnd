@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Animazioni</title>
+    <style>
+        .animazione1{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: cambio_colore; /*Nome dell'animazione*/
+            animation-duration: 4s; /*Durata dell'animazione*/
+            animation-iteration-count: 1; /*Numero di ripetizioni*/
+        }
+
+        @keyframes cambio_colore {
+            /* 0%{
+                background-color: red;
+            }
+            100%{
+                background-color: yellow;
+            } */
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+            
+        }
+
+        .ruota{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            transition-duration: 2s;
+        }
+
+        .ruota:hover{
+            /* transform: rotate(20deg); */
+            transform: translate(50px, 50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="animazione1"></div>
+    <div class="ruota"></div>
+</body>
+</html>
