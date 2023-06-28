@@ -85,6 +85,20 @@
         let testo2_ar = testo_2.split(" ")
         console.log(testo2_ar)
 
+        //Per eliminare un elemento ad un determinato indice
+        let ar_es1 = [1,4,7,9]
+        console.log("ES____")
+        ar_es1.splice(1,1) //Indice di partenza ed elementi da eliminare
+        console.log(ar_es1) 
+
+        let ar_es2 = [2,5,43,78]
+        ar_es2.splice(3,0,"Ciao")//Indice di partenza ed elementi da eliminare (0) e cosa inserire
+        console.log(ar_es2)
+
+        let ar_es3 = [2,56,76,34]
+        ar_es3.splice(2,1,"Eccomi")
+        console.log(ar_es3)
+
     </script>
     
 </body>

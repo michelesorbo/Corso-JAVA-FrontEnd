@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <p>
+        Inserisci nuovo elemneto <input type="text" id="el"><button id="btn_ins">Inserisci</button>
+    </p>
+    <ol id="lista">
+
+    </ol>
+    
+
+    <script>
+        const lista = document.querySelector("#lista")
+        const btn_ins = document.querySelector("#btn_ins")
+        const el = document.querySelector("#el")
+
+        //Impostazioni iniziali
+        let toDo = ["Spesa","Chiamare casa", "Ripetere le cose viste al corso"]
+
+        toDo.forEach(el =>{
+            lista.innerHTML += "<li>"+el+"</li>"
+        })
+        //Fine impostazioni predefinite
+
+        btn_ins.addEventListener("click", ()=>{
+            toDo.push(el.value)
+
+            lista.innerHTML = "" //Cancello quello che era prevente nella lista HTML
+
+            toDo.forEach(el =>{
+               lista.innerHTML += "<li>"+el+"</li>"
+            })
+
+            el.value = "" //Inposto l'attributo value dell'input a vuoto
+
+        })
+    </script>
+</body>
+</html>

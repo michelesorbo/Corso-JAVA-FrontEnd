@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro JS</title>
+</head>
+
+<body>
+
+    <h2>Inserisci dei numeri divisi da uno spazio e ti restituisco la somma</h2>
+    <input type="text" id="numeri"><br>
+    <p id="ris">Vedi il risultato qui</p>
+    <button id="btn">Calcola</button>
+    
+
+    <script>
+
+        const numeri = document.querySelector("#numeri")
+        const btn = document.querySelector("#btn")
+        const ris = document.querySelector("#ris")
+
+        let ar_numeri = [] //Crea un ar vuoto per trasformare la stringa presa in input in Array
+        let somma = 0
+
+        btn.addEventListener("click", () =>{
+            //Inserire codci qui
+            console.log(numeri.value)
+            ar_numeri = numeri.value.split(" ")
+            console.log(ar_numeri)
+            
+            ar_numeri.forEach(num =>{
+                somma += Number(num) //Faccio il cast per trasformare il numero da Stringa a Numerico
+            })
+
+            ris.innerHTML = "La somma dei numeri inseriti è: " + somma
+            somma = 0 //Resetto la somma per una nuovo ciclo
+
+        })
+        
+        // let somma = 0
+        // es_numeri.forEach(num =>{
+        //     //somma = somma + num
+        //     somma += num
+        // })
+
+        
+
+        // let nomi = "Alessio Massimiliano Francesco Svetlana"
+        // let nomi_ar = nomi.split(" ")
+        // console.log(nomi_ar)
+
+        
+
+
+    </script>
+</body>
+
+</html>

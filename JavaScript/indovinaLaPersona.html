@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indovina la persona</title>
+</head>
+<body>
+
+    <h2>Prova ad indovinare uno dei nomi che sto pensando</h2>
+    <input type="text" id="testo">
+    <p id="ris">Risultato</p>
+    <button id="btn">Prova</button>
+
+    <script>
+        const testo = document.querySelector("#testo")
+        const btn = document.querySelector("#btn")
+
+        let nomi = ["michele", "alessio","silvia"]
+
+        btn.addEventListener("click", ()=>{
+            console.log(testo.value.toLowerCase()) //Porta tutto in minuscolo
+            console.log(testo.value.trim())
+            console.log(testo.value.toLowerCase().trim())
+        })
+    </script>
+    
+</body>
+</html>
