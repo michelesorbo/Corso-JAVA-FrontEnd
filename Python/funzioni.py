@@ -43,4 +43,13 @@ print(stapaAR(ar_2))
 mio_testo = stapaAR(ar)
 print(mio_testo)
 
-#def pulisciStringa(testo):
+def pulisciStringa(testo):
+    testo = testo.strip()
+    testo = testo.replace(",", "")
+    testo = testo.replace(".", "")
+    testo = testo.replace("  ", " ")
+    testo = testo.lower()
+    return testo
+
+parola = "   Ciao, da , python"
+print(pulisciStringa(parola))
