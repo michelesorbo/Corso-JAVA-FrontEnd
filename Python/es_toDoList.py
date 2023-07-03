@@ -47,6 +47,10 @@ while scelta != 0:
     if scelta == 1:
         insToDo(toDo)
         visualizzaToDO(toDo)
+    elif scelta == 2:
+        print("Scelta 2")
+    elif scelta == 3:
+        print("scleta 3")
     else:
         print("\n\nScelta non valida riprova")
     

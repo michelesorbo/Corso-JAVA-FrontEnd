@@ -1,0 +1,9 @@
+Ciao Alessio
+Ciao Silvia
+Ciao Stefania
+Sono un nuovo testo
+Sono un nuovo testo
+ciao a tutti
+altra cosa
+nuova riga con lettura
+Ciao dal programma di Python
