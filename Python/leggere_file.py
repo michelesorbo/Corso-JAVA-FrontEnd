@@ -51,11 +51,52 @@ print("Fine programma")
 
  """
 
-file_uno = open("file_esempio/proverbi.txt", "r")
+# file_uno = open("file_esempio/proverbi.txt", "r")
+# ar_frase = []
+# conta_linea = 1
+""" 
+for line in file_uno.readlines():
+    if(line.count("casa")):
+        ar_frase.append(f"Linea: {conta_linea} {line}")
+    conta_linea += 1 #Aggiorno la linea sempre
+ """
+#Alternativa for senza dichiarare variabile esterna per count
+# for i,line in enumerate(file_uno.readlines()):
+#     if(line.count("casa")):
+#         ar_frase.append(f"Linea: {i+1} {line}")
 
-print(file_uno.read())
+# for el in ar_frase:
+#     print(el)
+    
 
 """ count = 0
 for line in file_uno.readlines():
     count +=1
     print(f"Line{count}: {line}") """
+
+"""
+Per poter scrivere all'interno di un file dobbiamo aprire il file con i giusti permessi specificati nella funzione open:
+
+    r: apre il file in sola lettura (modalità di default)
+    r+: apre i file in lettura e scrittura, il puntatore viene posizionato all'inzio del file.
+    w: apre il file in sola scrittura, se il file esiste lo sovrascrive, se non esiste lo crea.
+    w+: apre il file in lettura e scrittura, se il file esiste lo sovrascrive, se non esiste lo crea.
+    a: apre il file in scrittura senza sovrascrivere il contenuto corrente.
+    a+: apre il file in lettura e scrittura senza sovrascrivere il contenuto corrente. Se il file non esiste lo crea.
+Quindi come puoi capire non definendo un permesso apriamo automaticamente il file in lettura. Proviamo ad aprire il file in scrittura per l'aggiunta di contenuti (append).
+
+"""
+
+file_proverbi = open("file_esempio/proverbi.txt", "a+") #Il puntatore è posizionato alla fine del file
+file_proverbi.seek(0) #Posiziono il puntatore all'inizio del file
+
+
+def scriviFileMod(testo, file_txt):
+    file_uno = open("file_esempio/"+file_txt,"a") #Nome del file da aprire, modalità di apertura w, r, a
+    file_uno.write(testo) #Vado a scrivere sul file
+    file_uno.close() #Chiudo il file DA FARE SEMPRE
+    
+
+for line in file_proverbi.readlines():
+    if line.count('casa'):
+        scriviFileMod(line, "alessio.txt")
