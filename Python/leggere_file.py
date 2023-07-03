@@ -97,6 +97,28 @@ def scriviFileMod(testo, file_txt):
     file_uno.close() #Chiudo il file DA FARE SEMPRE
     
 
-for line in file_proverbi.readlines():
-    if line.count('casa'):
-        scriviFileMod(line, "alessio.txt")
+def delete_line(filename, line_number):
+
+    #open di default apre il file in lettura (r)
+    with open(filename) as file:
+        lines = file.readlines()
+    
+    if(line_number <= len(lines)):
+        del lines[line_number - 1]
+
+        with open(filename, "w") as file:
+            for line in lines:
+                file.write(line)
+    else:
+        print(f"La linea {line_number} non è presente nel file")
+
+
+def scriviFileIndice(filename):
+    with open(filename) as file:
+        for i, line in enumerate(file.readlines()):
+            print(f"{i+1}: {line}")
+
+scriviFileIndice("file_esempio/alessio.txt")
+delete_line("file_esempio/alessio.txt", 3)
+print("\n\n\DOPO-------------------------\n\n")
+scriviFileIndice("file_esempio/alessio.txt")
