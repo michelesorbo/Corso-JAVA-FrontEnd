@@ -7,6 +7,7 @@
     <title>Espressioni Regolari (RegExp)</title>
 </head>
 <body>
+    <p>W3School <a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp">Link</a></p>
     <table>
         <tr>
             <td>Nome</td>
@@ -41,10 +42,26 @@
 
         //Espressioni Regolari da usare
         // regola.test(campo da testare)
+        let rx_mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/ //Per validare la mail
         let rx_cap = /^[0-9]{5}$/ //Espressione per controllare il CAP
         let rx_inizio_con = /^[ABDf]/ //Il mio testo deve iniziare con una di questi caratteri
         let rx_inizio_diverso = /^[^ABDf]/ //Non iniziano con i valori nelle quadre
         let rx_cf = /^[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}$/ //AAABBB12C21D345E 
+        /*
+        Pattern per password
+        ^                                            Match the beginning of the string
+        (?=.*[0-9])                                  Require that at least one digit appear anywhere in the string
+        (?=.*[a-z])                                  Require that at least one lowercase letter appear anywhere in the string
+        (?=.*[A-Z])                                  Require that at least one uppercase letter appear anywhere in the string
+        (?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\])        Require that at least one special character appear anywhere in the string
+        .{8,32}                                      The password must be at least 8 characters long, but no more than 32
+        $                                            Match the end of the string.
+        */
+       let rx_pwd = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$/
+        
+        
+        
+        
         btn.addEventListener("click", ()=>{
             if(rx_cf.test(cf.value)){
                 console.log("Regola OK")
