@@ -73,16 +73,21 @@ class Insegnate(Persona):
 #CREO LA CALASSE AULA per contenere gli studenti
 class Aula:
     def __init__(self, nome):
-        self.alunni = {}
+        self.alunni  = [] #Lista che poi conterrà dizionari
         self.nome = nome
     
     def aggiungiAlunno(self, studente):
-        self.alunni[studente.nome] = studente
-        self.alunni[studente.cognome] = studente
+        alunno = {
+            "nome" : studente.nome,
+            "cognome" : studente.cognome
+        }
+        self.alunni.append(alunno)
 
     def visualizzaStudenti(self):
+        print(len(self.alunni))
         for alunno in self.alunni:
-            print(f"Nome: {self.alunni[alunno].nome} Cognome: {self.alunni[alunno].cognome}")
+            print(f"Nome: {alunno['nome']} Cognome: {alunno['cognome']}")
+            #print(f"Nome: {alunno} Cognome: {alunno}")
 
 
 
