@@ -1,0 +1,27 @@
+Automobili:
+Si vuole implementare un'insieme di classi sufficiente a descrivere un set di automobili, con
+particolare riferimento a due proprietà fondamentali: il suo motore e l'insieme di optional con i
+quali viene fornita.
+Non è nota a priori la tipologia delle automobili che verranno trattate dal programma, così come
+risulta sconosciuto il tipo di motore che un'automobile può montare.
+Realizzare le classi riferite ai motori. Questi devono contenere
+informazioni su:
+‐ cilindrata
+‐ cilindri
+‐ potenza
+E devono prevedere operazioni per conoscere:
+‐ La cilindrata
+‐ La potenza (supponendo che sia una funzione di cilindrata e cilindri)
+‐ Se è diesel
+‐ Il numero massimo di giri al minuto (RPM)
+La potenza e gli RPM massimi sono definiti in modo diverso in base al fatto che si tratti di un
+motore diesel o benzina.
+Realizzare le classi riferite alle auto e gli optional.  
+Ogni auto deve prevedere:  
+‐ targa
+‐ marca
+‐ modello
+‐ motore
+‐ numero variabile di optional
+Un optional deve contenere codice, descrizione, valore e prevedere un metodo toString che
+restituisca i dati in un’unica stringa (per velocizzarne la stampa).

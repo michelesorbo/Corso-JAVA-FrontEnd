@@ -12,6 +12,12 @@ class Persona:
     def setNome(self,nome):
         self._nome = self._formattaTesto(nome)
 
+    def getCognome(self):
+        return self.cognome
+
+    def setCognome(self,cognome):
+        self.cognome = cognome
+
     def _formattaTesto(self, testo):
         testo = testo.strip()
         testo = testo.lower()
@@ -48,6 +54,8 @@ persona1 = Persona("Michele", "Sorbo")
 persona2 = Persona("Stefania", "Malfatti")
 
 st1 = Studente("Alessio","Leodori","Python")
+
+st2 = Studente(persona1.getNome(),persona1.cognome, "JAVA")
 
 print(st1.saluta())
 print(persona1.saluta())

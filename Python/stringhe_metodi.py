@@ -108,3 +108,9 @@ if es_testo.lower().count(trova.lower()) > 0:
     print(f"Parola trovata e sono presenti {es_testo.lower().count(trova.lower())} occorrenze")
 else:
     print("Parola non presente")
+
+
+iron_man = "Tony-Stark-40-Torre Stark"
+#testo_separato = iron_man.split("-")
+nome, cognome, eta, residenza = iron_man.split("-") #Assegno alle variabili lo split
+print(f"{nome} {cognome} {eta} {residenza}")
