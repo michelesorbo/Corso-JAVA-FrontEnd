@@ -3,7 +3,7 @@ python3 -m venv <nome_della_venv> (molti usano mettere un . prima della cartella
 
 2) Attivare la virtualEnv (rif: https://docs.python.org/3/library/venv.html)
 MAC-Linux -> source <nome_della_venv>\bin\activate
-WINDOWS-> <nome_della_venv>\Script\activate.bat (cmd)*
+WINDOWS-> <nome_della_venv>\Scripts\activate.bat (cmd)*
 WINDOWS-> <nome_della_venv>\Scripts\Activate.ps1 (PowerShel)
 -verificare che sia attiva. All'inzio del prompt ci deve essere (nome_della_venv)
 -Per disattvare la virtualEnv scrivere deactivate, da lanciare alla fine dello sviluppo
@@ -22,3 +22,18 @@ Dopo aver installato la libreria Django nella virtualEnv lanciare il comando -> 
 Una volta finita l'installazione del Progetto andare nella cartella del progetto e lanciare il comando
 ->python manage.py runserver
 rif: https://docs.djangoproject.com/en/4.2/intro/tutorial01/
+
+
+--------------COMANDI DJANGO--------------
+
+- Creare un app
+Django funziona ad app. Un app può gestire una parte del sito o tutto il sito.
+Per creare un app -> python manage.py startapp <nome_app>
+Dopo che abbiamo creato l'app bisogna dire a Django che esiste quell'app.
+
+
+Per gestire gli URL del sito:
+Andare nel file urls del mainSite e collegare la pagina urls del'app tramite il metodo include
+
+Nel file urls dell'app creare le url che ci interessano e collegarle ai relativi metodi presenti 
+nel file views. Ricordati di collegare il file view nel file urls con "from . import view"
