@@ -14,10 +14,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin #Serve per visualizzare il backend di django
+from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('mainBlog.urls')), #Diciamo a djando che le url le deve vedere dal file urls.py di mainBlog
+    path('', include('mainBlog.urls')),
 ]

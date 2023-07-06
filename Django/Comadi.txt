@@ -10,15 +10,15 @@ WINDOWS-> <nome_della_venv>\Scripts\Activate.ps1 (PowerShel)
 
 DOPO I PRIMI 2 PUNTI posso installare la libreria django
 
-- Per visualizzare le libreri Python installate nella virtualEnv scrivere -> pip list
+3 opzionale) Per visualizzare le librerie Python installate nella virtualEnv scrivere -> pip list
 
-- Installo la libreria django 
+4) Installo la libreria django 
 comando-> pip install django
 
-- Creare un progeto Django:
+5) Creare un progeto Django:
 Dopo aver installato la libreria Django nella virtualEnv lanciare il comando -> django-admin startproject <nome_del_progetto>
 
-- Controllare il Progetto
+6) Controllare il Progetto
 Una volta finita l'installazione del Progetto andare nella cartella del progetto e lanciare il comando
 ->python manage.py runserver
 rif: https://docs.djangoproject.com/en/4.2/intro/tutorial01/
@@ -30,10 +30,32 @@ rif: https://docs.djangoproject.com/en/4.2/intro/tutorial01/
 Django funziona ad app. Un app può gestire una parte del sito o tutto il sito.
 Per creare un app -> python manage.py startapp <nome_app>
 Dopo che abbiamo creato l'app bisogna dire a Django che esiste quell'app.
+Andare in settings e aggiungere alla lista INSTALLED_APPS il nome dell'applicazione appena creata
 
 
 Per gestire gli URL del sito:
-Andare nel file urls del mainSite e collegare la pagina urls del'app tramite il metodo include
+Andare nel file urls del mainSite e collegare la pagina urls del'app tramite il metodo include, ricordati di creare
+il file urls.py nella cartella dell'app
+
+Nel file urls appena creato nella cartella dell'app inserire i comandi base per creare una urlpatterns
 
 Nel file urls dell'app creare le url che ci interessano e collegarle ai relativi metodi presenti 
 nel file views. Ricordati di collegare il file view nel file urls con "from . import view"
+
+
+------ Gestione die Templates --------
+Prima di tutto devo creare una cartella "templates" dentro la cartella dell'app
+Dopo averla creata possiamo inserire al suo interno le pagine HTML
+
+per visualizzare una pagina HTML usare il metodo "render" nel file views 
+il metodo rendere-> rendere(request, 'pagina HTML presente nel templates') IL PRIMO PARAMETRO è SEMPRE request IL SECONDO è sempre la pagina HTML
+
+
+Quando creo una nuova pagina HTML
+1) Creare la base della pagina in HTML
+2) Creare il medoto per visualizzare la pagina nel file views
+3) Creare il path nel file urls dell'app
+
+
+Per poter creare un link alla pagina posso aggiungere al path del file urls il parametro nome
+Nel file HTML ad href collego la pagina con {% url 'nome_dato_in_name_di_path' %}

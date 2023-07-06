@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse #Vado a importare il metodo HttpResponse di Django
+from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Benvenuto nella mia pagina.")
+    #return HttpResponse("Ciao Mondo!!!")
+    return render(request, 'base.html')
 
-def mohamed(request):
-    return HttpResponse("<h1>Pagina di Mohamed</h1>")
+def michele(request):
+    return render(request,'michele.html')
