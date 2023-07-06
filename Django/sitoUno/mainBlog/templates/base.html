@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benvanuti nel mio sito</title>
+    <title>{% block titolo %}Benvenuti nel sito di Python{% endblock titolo %}</title>
     <!--CSS BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    {% block css_pagina %}{% endblock css_pagina %}
 </head>
 
 <body>
@@ -27,19 +28,26 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'michele' %}">Michele</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contatti' %}">Contatti</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!--FINE NAVBAR-->
     <div class="container">
-        <h1>Ciao Mondo dal mio sito</h1>
+        <h1>{% block titolo_pagina %}Pagina senza titolo{% endblock titolo_pagina %}</h1>
+
+        {% block contenuto %}{% endblock contenuto %}
+
     </div>
 
     <!--JS BootStrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    {% block js_pagina %}{% endblock js_pagina %}
 </body>
 
 </html>
