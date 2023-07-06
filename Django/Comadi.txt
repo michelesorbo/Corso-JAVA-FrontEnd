@@ -1,0 +1,24 @@
+1) Creare la virtualEnv
+python3 -m venv <nome_della_venv> (molti usano mettere un . prima della cartella)
+
+2) Attivare la virtualEnv (rif: https://docs.python.org/3/library/venv.html)
+MAC-Linux -> source <nome_della_venv>\bin\activate
+WINDOWS-> <nome_della_venv>\Script\activate.bat (cmd)*
+WINDOWS-> <nome_della_venv>\Scripts\Activate.ps1 (PowerShel)
+-verificare che sia attiva. All'inzio del prompt ci deve essere (nome_della_venv)
+-Per disattvare la virtualEnv scrivere deactivate, da lanciare alla fine dello sviluppo
+
+DOPO I PRIMI 2 PUNTI posso installare la libreria django
+
+- Per visualizzare le libreri Python installate nella virtualEnv scrivere -> pip list
+
+- Installo la libreria django 
+comando-> pip install django
+
+- Creare un progeto Django:
+Dopo aver installato la libreria Django nella virtualEnv lanciare il comando -> django-admin startproject <nome_del_progetto>
+
+- Controllare il Progetto
+Una volta finita l'installazione del Progetto andare nella cartella del progetto e lanciare il comando
+->python manage.py runserver
+rif: https://docs.djangoproject.com/en/4.2/intro/tutorial01/
