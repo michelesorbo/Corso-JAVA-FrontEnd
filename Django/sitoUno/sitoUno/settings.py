@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainBlog', #Main Blog creata da me
+    'corsiBlog', #App per gestire i corsi
 ]
 
 MIDDLEWARE = [

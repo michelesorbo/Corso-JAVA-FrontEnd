@@ -59,3 +59,8 @@ Quando creo una nuova pagina HTML
 
 Per poter creare un link alla pagina posso aggiungere al path del file urls il parametro nome
 Nel file HTML ad href collego la pagina con {% url 'nome_dato_in_name_di_path' %}
+
+---- Passare parametri da un metodo ad una pagina HTML -------
+Nel metodo in view creare tutta la logica e inviare tramite la funzione render le varibili come terzo parametro 
+di rendere. Per inviare più parametri ricodati di usare un dizionario
+es: return render(request,'mome:pagina.html'.{parametri da passare})

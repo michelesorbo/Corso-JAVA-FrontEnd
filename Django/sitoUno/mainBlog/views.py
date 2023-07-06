@@ -7,7 +7,10 @@ def index(request):
     return render(request, 'index.html')
 
 def michele(request):
-    return render(request,'michele.html')
+    prof = "Mario Rossi"
+    tutor = "Carlo Bianchi"
+    alunni = ["Alessio","Enza","Stefania","Mohamed","Manuel"] #Scopo della lezione di domani prendere i dati dal file model
+    return render(request,'michele.html', {"prof_classe":prof, "tutor_classe":tutor,"alunni":alunni})
 
 def contatti(request):
     return render(request, 'contatti.html')

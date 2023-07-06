@@ -3,8 +3,12 @@
 {% block titolo_pagina %}Pagina di Michele{% endblock titolo_pagina %}
 {% block contenuto %}
 <p>Benvenuto nea mia pagina personale</p>
+<h3>Elenco rosisiti</h3>
+<h4>Il prof è: {{ prof_classe }}</h4>
+<h5>Il tutor è: {{ tutor_classe }}</h5>
 <ul>
-    <li>Uno</li>
-    <li>Due</li>
+    {% for alunno in alunni  %}
+        <li>{{ alunno }}</li>
+    {% endfor %}
 </ul>
 {% endblock contenuto %}
