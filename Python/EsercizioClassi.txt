@@ -19,3 +19,24 @@ Un metodo “aggiungi_prodotto” che aggiunga un nuovo prodotto al magazzino
 Un metodo “rimuovi_prodotto” che rimuova un prodotto dal magazzino
 Un metodo “calcola_costi_magazzinaggio” che calcoli i costi di magazzinaggio per tutti i prodotti presenti nel magazzino
 Crea inoltre una classe Prodotto che abbia gli attributi “nome”, “prezzo” e “scorta”.
+
+
+ESERCIZI EREDITARIETA'
+1)
+Scrivere una classe Veicolo che abbia le seguenti proprietà: marca, modello e anno. 
+Aggiungi poi i metodi accellera = ritorna "Sto Accellerando" e frena = ritorna "Sto Frenando". 
+Creare poi una classe Auto che eredita da Veicolo ma aggiunge la proprietà colore ed il metodo cambia_colore().
+
+2)
+Modifica la classe Auto in modo che erediti anche il metodo __str__() dalla classe Veicolo, 
+in modo da stampare le informazioni sull’auto in questo formato: “Marca: Ferrari, Modello: Enzo, Anno: 2004, Colore: Rosso”.
+
+------------------------------------------------------------------------
+3)
+Scrivi una classe Forma che abbia un metodo area() che calcoli l’area della forma. 
+Poi crea le classi Quadrato e Cerchio che ereditino dalla classe Forma e che implementino il metodo area() in modo appropriato per ogni forma. 
+Utilizza le classi create per creare un quadrato e un cerchio, quindi stampa l’area di ognuno di essi.
+
+class Forma:
+def area(self):
+    pass
