@@ -92,3 +92,17 @@ importo la tabella creata in models
 from .models import <nome_della_calsse>
 
 admin.site.register(<nome_della_classe>)
+
+
+------------
+Creare ul elenco di corsi che hanno i seguenti campi
+titolo = Titolo del corso 
+descrizione_breve = piccola introduzione al corso
+contenuto = contenuto del corso
+inizio = data inizio
+durata = durata in ore
+docente = prendere da User
+costo = prezzo 
+
+Nella pagina corsi devo visualizzare solo il titolo del corso e la descrizione breve.
+Quando seleziono un corso si aprirà la pagina di dettaglio corso con tutte le informazioni.
