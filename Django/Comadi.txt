@@ -114,3 +114,7 @@ Cose da Fare.
 3)Aggiungere la tabella nell'amministratore
 per rislvere il nome plurale della tabella in admin (togliere la s finale)
 creare una classe Meta dentro la classe della tabelle e inserire verbose_name_plural = <nome_della_tabella_plurale>
+4)Aggiornare il metodo per visualizzare i corsi e di conseguenza anche la pagina html di visualizzazione
+- aggiorno il metodo index
+5)Creare il medoto per visualizzare il corso singolo
+6)creare la url per vedere il corso singolo con il paramentro pk

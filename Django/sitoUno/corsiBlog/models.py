@@ -7,9 +7,9 @@ class Corsi(models.Model):
     descrizione = models.CharField(max_length=250)
     contenuto = models.TextField()
     data_inizio = models.DateField()
-    durata_ore = models.DecimalField(decimal_places=3, max_digits=3)
+    durata_ore = models.DecimalField(decimal_places=0, max_digits=3)
     docente = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    prezzo = models.DecimalField(decimal_places=10, max_digits=10)
+    prezzo = models.DecimalField(decimal_places=0, max_digits=10)
 
     def __str__(self):
         return self.titolo

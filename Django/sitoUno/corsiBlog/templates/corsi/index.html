@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
-{% block titolo %}Cori{% endblock titolo %}
+{% block titolo %}Corsi{% endblock titolo %}
 {% block titolo_pagina %}Pagina dei Corsi{% endblock titolo_pagina %}
 {% block contenuto %}
+{% for corso in corsi  %}
 <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Corso Java</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ corso.titolo }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ corso.prezzo }}€</h6>
+    <p class="card-text">{{ corso.descrizione }}</p>
+    <a href="{% url 'corso_singolo' corso.pk %}" class="btn-primary">Più info</a>
   </div>
+</div>
+{% endfor %}
 {% endblock contenuto %}

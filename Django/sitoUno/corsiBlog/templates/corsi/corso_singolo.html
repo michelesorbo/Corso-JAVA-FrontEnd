@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block titolo %}{{ corso.titolo }}{% endblock titolo %}
+{% block titolo_pagina %}{{ corso.titolo }}{% endblock titolo_pagina %}
+{% block contenuto %}
+<p>{{ corso.prezzo }}€ - Durata: {{ corso.durata_ore }} ore - Inizio: {{ corso.data_inizio }}</p>
+<p>{{ corso.descrizione }}</p>
+<p>{{ corso.contenuto }}</p>
+<p>{{ corso.docente.first_name }} {{ corso.docente.last_name }}</p>
+
+{% endblock contenuto %}
