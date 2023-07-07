@@ -16,6 +16,4 @@ class Post(models.Model):
     #SET_NULL setta il valore a nullo
 
     def __str__(self):
-        print("CIAOOOOOOOOO")
-        print(type(self.data_ins))
-        return f"{self.titolo} data creazione: {self.data_ins}"
+        return f"{self.titolo} data creazione: {self.data_ins.strftime('%A %d %B %Y')}"

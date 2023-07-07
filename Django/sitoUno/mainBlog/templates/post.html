@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block titolo %}{{ post.titolo }}{% endblock titolo %}
+{% block titolo_pagina %}{{ post.titolo }}{% endblock titolo_pagina %}
+{% block css_pagina %}
+<style>
+    .corpo{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+    .autore{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8px;
+        font-style: italic;
+    }
+</style>
+{% endblock css_pagina %}
+
+{% block contenuto %}
+    <p class="autore"><b>Creato:</b> {{ post.data_ins }}</p>
+    <p class="corpo">{{ post.corpo }}</p>
+    <p class="autore"><b>Autore: {{ post.autore.first_name }} {{ post.autore.last_name }}</b>  email: {{ post.autore.email }}</p>
+    <hr>
+
+{% endblock contenuto %}
+
