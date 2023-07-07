@@ -64,3 +64,31 @@ Nel file HTML ad href collego la pagina con {% url 'nome_dato_in_name_di_path' %
 Nel metodo in view creare tutta la logica e inviare tramite la funzione render le varibili come terzo parametro 
 di rendere. Per inviare più parametri ricodati di usare un dizionario
 es: return render(request,'mome:pagina.html'.{parametri da passare})
+
+Per modificare l aporta di default del runserver usare il comando -> python manage.py runserver <numero_di_porta>
+Se vuoi rendere permanente la modifica della porta di defaul del runserver andare in manage.py e nel metodo mainSite
+inerire il seguente codice: 
+from 
+django.core.management.commands.runserver import Command as runserver
+runserver.default_port = "8005"
+
+---Pagina ADMIN-------
+Per abilitare la pagina admin fare prima le migration -> python manage.py migrate
+Per creare un SuperAdmin (Primo utente del sito) lanciare il comando ->python manage.py createsuperuser
+
+
+----Creare Tabelle nel DB ------
+Per crea tabelle nel DB devo andare nel file model.py dell'application.
+Ogni application crea le tabelle che servono per gestire le informazioni dell'application
+
+Una volta settati i campi della tabella in models.py, dobbiamo dire a Django di aggiungere
+la tabella nel DB 
+->python manage.py makemigrations #Serve a preparare le query da passare al DB
+DOPO IL makemigration
+->python manage.py migrate
+
+Per visualizzare la tabella creata nell'area admin, apro il file admin.py dell'app e inserisco:
+importo la tabella creata in models
+from .models import <nome_della_calsse>
+
+admin.site.register(<nome_della_classe>)
