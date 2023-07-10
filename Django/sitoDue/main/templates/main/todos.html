@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block titolo_pagina %}To Do List{% endblock titolo_pagina %}
+{% block contenuto %}
+{% for t in todos  %}
+<h3><a href="{% url 'todo' t.pk %}">{{ t.titolo }}</a></h3>
+<p>{{ t.autore }} - {{ t.create_at }}</p>
+{% endfor %}
+{% endblock contenuto %}

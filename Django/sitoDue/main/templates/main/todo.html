@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block titolo_pagina %}To Do List{% endblock titolo_pagina %}
+{% block contenuto %}
+<h3>{{ todo.titolo }}</h3>
+<p>{{ todo.task }}</p>
+<p>{{ todo.autore }}<br>Data Creazione: {{ todo.create_at }} <br>Ultima Modifica: {{ todo.update_at }} </p>
+{% endblock contenuto %}
