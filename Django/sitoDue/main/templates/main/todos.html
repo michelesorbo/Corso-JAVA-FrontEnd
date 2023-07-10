@@ -4,5 +4,6 @@
 {% for t in todos  %}
 <h3><a href="{% url 'todo' t.pk %}">{{ t.titolo }}</a></h3>
 <p>{{ t.autore }} - {{ t.create_at }}</p>
+<p>Categoria: {{ t.categoria }} </p>
 {% endfor %}
 {% endblock contenuto %}

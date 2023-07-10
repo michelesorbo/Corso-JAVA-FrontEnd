@@ -25,6 +25,21 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'todos' %}">ToDo's</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'crea_todo' %}">Crea ToDo</a>
+            </li>
+
+            {% if user.is_authenticated %}
+            <span class="navbar-text">Sei loggato come {{ user.username}}</span>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">LogOut</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="/login">LogIn</a>
+            </li>
+            {% endif %}
             
           </ul>
         </div>

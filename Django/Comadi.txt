@@ -125,7 +125,7 @@ creare una classe Meta dentro la classe della tabelle e inserire verbose_name_pl
 1° Metodo usare libreria Crisy from
 installare la libreria seguendo i comandi su -> https://pypi.org/project/crispy-bootstrap5/
 
-Creare il file forms.py nella'application dove voglòio mostrare un form nella parte front end del sito
+Creare il file forms.py nella'application dove voglio mostrare un form nella parte front end del sito
 
 Creare il metodo per visualizzare o validare i dati del form passati tramite post
 

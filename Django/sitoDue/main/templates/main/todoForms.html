@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block titolo_pagina %}Inserisci un ToDo{% endblock titolo_pagina %}
+{% load crispy_forms_tags %}
+{% block contenuto %}
+<h1>Inserisci ToDo</h1>
+<form method='post'>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success">Inserisi ToDo</button>
+</form>
+{% endblock contenuto %}
