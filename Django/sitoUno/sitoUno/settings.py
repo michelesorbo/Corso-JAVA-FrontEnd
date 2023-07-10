@@ -39,7 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainBlog', #Main Blog creata da me
     'corsiBlog', #App per gestire i corsi
+    "crispy_forms", #Libreria Crispy
+    "crispy_bootstrap5", #Libreria Crispy
 ]
+
+#CRISPY SETTING
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+#FINE CRISPY SETTING
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,3 +131,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#REDIRECT PER LOGIN E LOGOUT
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

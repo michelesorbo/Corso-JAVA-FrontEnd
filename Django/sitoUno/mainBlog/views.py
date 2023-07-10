@@ -1,5 +1,7 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse, Http404
+from .forms import RegistrationForm
+from django.contrib.auth import login, logout, authenticate #Importo le classi predefinite per fare il login e il logout
 #Importo il DataBase POST
 from .models import Post
 
@@ -26,3 +28,17 @@ def michele(request):
 
 def contatti(request):
     return render(request, 'contatti.html')
+
+
+
+def sign_up(request):
+    if request.method == 'POST': #Verifico se mi sono state passate delle variabili tramite POST
+        form = RegistrationForm(request.POST) #Vado a prendere tutte le variabili del form di registrazione e le salvo nella variabile form
+        if form.is_valid(): #Vado a controllare se il form è valido
+            user = form.save()#Eseguo l'nserimento nella tabella e salvo la pk dell'utente appena creato
+            login(request, user) #Faccio l'auto login dell'utente appena creato
+            return redirect("index")#Lo reindirizzo su index una volta finita la registrazione
+    else:
+        form = RegistrationForm() #Vado a caricare i campi del form vuoti da visualizzare nel front end
+
+    return render(request,'registration/sign_up.html', {"form":form})    

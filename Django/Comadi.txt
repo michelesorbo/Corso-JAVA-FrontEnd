@@ -118,3 +118,15 @@ creare una classe Meta dentro la classe della tabelle e inserire verbose_name_pl
 - aggiorno il metodo index
 5)Creare il medoto per visualizzare il corso singolo
 6)creare la url per vedere il corso singolo con il paramentro pk
+
+
+
+--------Crazione di FORM lato dront end --------
+1° Metodo usare libreria Crisy from
+installare la libreria seguendo i comandi su -> https://pypi.org/project/crispy-bootstrap5/
+
+Creare il file forms.py nella'application dove voglòio mostrare un form nella parte front end del sito
+
+Creare il metodo per visualizzare o validare i dati del form passati tramite post
+
+Creare la url per la visualizzazione del form

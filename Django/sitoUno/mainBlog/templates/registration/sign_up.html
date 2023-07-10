@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block titolo %}Registrati{% endblock titolo %}
+{% block titolo_pagina %}Form di registrazione{% endblock titolo_pagina %}
+{% load crispy_forms_tags %}
+{% block contenuto %}
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success">Registrati</button>
+</form>
+{% endblock contenuto %}
