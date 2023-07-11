@@ -37,7 +37,11 @@ class Alunni(models.Model):
     cognome = models.CharField(max_length=150)
     email = models.EmailField()
     tel = models.CharField(max_length=15)
+    img_prof = models.ImageField(("Inserisci Immagine di profilo"), upload_to='img/alunni', height_field=None, width_field=None, max_length=None)
     corso = models.ForeignKey(Corsi, on_delete=models.CASCADE)
+
+    def img_preview(self):
+        return mark_safe(f'<img src="{self.img_prof.url}" width="300">')
 
     def __str__(self):
         return f"{self.nome} {self.cognome}"

@@ -20,10 +20,11 @@ def CorsiByCat(require, cat_id):
 
 def Candidatura(request):
     if request.method == 'POST':
-        form = AlunniForm(request.POST)
+        form = AlunniForm(request.POST, request.FILES)
         if form.is_valid():
-            alunni = form.save(commit=False)
-            alunni.save()
+            form.save()
+            # alunni = form.save(commit=False)
+            # alunni.save()
             return redirect('index')
     else:
         form = AlunniForm()

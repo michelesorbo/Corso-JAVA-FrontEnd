@@ -9,4 +9,7 @@ class CorsiAdmin(admin.ModelAdmin):
 
 admin.site.register(Corsi, CorsiAdmin)
 
-admin.site.register(Alunni)
+class AlunniAdmin(admin.ModelAdmin):
+    readonly_fields = ['img_preview']
+
+admin.site.register(Alunni, AlunniAdmin)
