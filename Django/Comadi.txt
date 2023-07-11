@@ -130,3 +130,11 @@ Creare il file forms.py nella'application dove voglio mostrare un form nella par
 Creare il metodo per visualizzare o validare i dati del form passati tramite post
 
 Creare la url per la visualizzazione del form
+
+
+-------- Gestione delle Immagini ---------
+1)Installare la libreria Pillow -> pip install pillow 
+2)Modificare Setting.py per dire dove vanno gli elementi multimediali.
+3)Aggiungere un campo imageField nel model del DB. Ricordati di rifare makemigrations e migrate
+4)Aggiungere al file urls le libreire settings e static e concatenarle a urlspatterns
+5)Nel template ricodati di utilizzare es corso.img.url per avere la posizione dell'immagine

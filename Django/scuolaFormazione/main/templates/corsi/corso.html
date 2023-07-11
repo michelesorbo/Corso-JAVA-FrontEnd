@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
-{% block pagina_titolo %}I nostri corsi{% endblock pagina_titolo %}
+{% block pagina_titolo %}{{ corso.titolo }}{% endblock pagina_titolo %}
+
+{% block stile_pagina %}
+<style>
+img {
+    width: 15rem;
+}
+</style>
+{% endblock stile_pagina %}
+
 {% block contenuto %}
 <h2>{{corso.titolo}}</h2>
+<img src="{{ corso.img.url }}" alt="{{ corso.titolo }}" class="img-thumbnail">
 <p>{{ corso.descrizione }}</p>
 <p>{{ corso.prezzo}}€</p>
 <p>Inizio: {{ corso.data_inizio}} - Ore {{ corso.durata_ore}}</p>

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import mark_safe
 
 # Create your models here.
 class CategoriaCorsi(models.Model):
@@ -13,6 +14,7 @@ class CategoriaCorsi(models.Model):
     
 class Corsi(models.Model):
     titolo = models.CharField(max_length=200)
+    img = models.ImageField(upload_to='img/corsi', default=None)
     descrizione = models.TextField()
     durata_ore = models.CharField(max_length=4)
     data_inizio = models.DateTimeField()
@@ -21,6 +23,10 @@ class Corsi(models.Model):
 
     def __str__(self):
         return self.titolo
+    
+    #Creo il metodo per visualizzare l'img in Admin
+    def img_preview(self):
+        return mark_safe(f'<img src="{self.img.url}" width="300">')
     
     class Meta:
         verbose_name_plural = "Corsi"
