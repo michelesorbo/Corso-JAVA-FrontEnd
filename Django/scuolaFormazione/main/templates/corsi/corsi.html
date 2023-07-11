@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block pagina_titolo %}I nostri corsi{% endblock pagina_titolo %}
+{% block contenuto %}
+<h2>Elenco corsi</h2>
+{% for corso in corsi  %}
+<a href="{% url 'corso' corso.pk %}">{{corso.titolo}}</a>
+<p>{{ corso.prezzo}}€</p>
+<hr>
+{% endfor %}
+{% endblock contenuto %}

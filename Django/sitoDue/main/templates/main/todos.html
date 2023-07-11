@@ -3,6 +3,7 @@
 {% block contenuto %}
 {% for t in todos  %}
 <h3><a href="{% url 'todo' t.pk %}">{{ t.titolo }}</a></h3>
+<img src="{{ t.img.url }}" class="img-thumbnail">
 <p>{{ t.autore }} - {{ t.create_at }}</p>
 <p>Categoria: {{ t.categoria }} </p>
 {% endfor %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block pagina_titolo %}I nostri corsi{% endblock pagina_titolo %}
+{% block contenuto %}
+<h2>{{corso.titolo}}</h2>
+<p>{{ corso.descrizione }}</p>
+<p>{{ corso.prezzo}}€</p>
+<p>Inizio: {{ corso.data_inizio}} - Ore {{ corso.durata_ore}}</p>
+<p><a href="{% url 'corsi_cat' corso.categoria.pk %}">{{ corso.categoria }}</a></p>
+
+{% endblock contenuto %}

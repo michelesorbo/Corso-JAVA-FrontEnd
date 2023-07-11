@@ -12,6 +12,7 @@ class ToDoCategory(models.Model):
 class ToDo(models.Model):
     autore = models.ForeignKey(User, on_delete = models.CASCADE)
     categoria = models.ForeignKey(ToDoCategory, on_delete=models.CASCADE, default=None)
+    img = models.ImageField(default=None, upload_to='img')
     titolo = models.CharField('Titolo del ToDo',max_length = 200,default=None)
     task = models.TextField('Descrizione del Task')
     create_at = models.DateTimeField(auto_now_add=True)

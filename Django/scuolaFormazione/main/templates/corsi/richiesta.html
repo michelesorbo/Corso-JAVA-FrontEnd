@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block titolo_pagina %}Richiesta Corso{% endblock titolo_pagina %}
+{% load crispy_forms_tags %}
+{% block contenuto %}
+<h1>Candidati ad un corso</h1>
+<form method='post'>
+{% csrf_token %}
+{{ form|crispy }}
+<button type="submit" class="btn btn-success">Richiedi</button>
+</form>
+{% endblock contenuto %}
