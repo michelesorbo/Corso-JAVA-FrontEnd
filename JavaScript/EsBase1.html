@@ -14,14 +14,50 @@
     </p>
     <h1>Indovina Numero</h1>
     <p>Tentativi fatti: <span id="tentativi">0</span></p>
-    <p id="esito">Sbagliato il numero inserito è maggiore rispetto il numero da indovinare</p>
+    <p id="esito"></p>
     <p>
         <input type="text" id="numero"><button id="btn">Indovina</button><button id="btn_reset">Ricomincia</button>
     </p>
     
     <script>
-        let n_rand = Math.floor(Math.random() * 100) + 1
+
+        const tentativi = document.querySelector("#tentativi")
+        const esito = document.querySelector("#esito")
+        const numero = document.querySelector("#numero")
+        const btn = document.querySelector("#btn")
+        const btn_reset = document.querySelector("#btn_reset")
+
+
+        function genereNumero(){
+            let rand = Math.floor(Math.random() * 100) + 1 //Metto var per renderlo visibile in tutta la pagina
+            return rand
+        }
+
+        //Faccio generare il numero appena entro nella pagina
+        let n_rand = genereNumero() //Richiamo la funzione e assegna il numero randomico creato alla variabile n_rand
         console.log(n_rand)
+
+        btn.addEventListener("click", ()=>{
+            if(n_rand == Number(numero.value)){
+                esito.innerHTML = "<b>Hai indovinato</b>"
+            }else if(Number(numero.value) > n_rand){
+                esito.innerHTML = "Hai sbagliato il numero inserito è maggiore prova con un numero minore"
+            }else{
+                esito.innerHTML = "Hai sbagliato il numero inserito è minore prova con un numero maggiore"
+            }
+            //Devo sempre aggiornare i tentativi
+            tentativi.innerHTML = Number(tentativi.innerHTML) + 1
+            //Pulisco l'imput
+            numero.value = ""
+        })
+
+        btn_reset.addEventListener("click",()=>{
+            //Resetto i tentativi
+            tentativi.innerHTML = "0"
+            //Devo far generare un nuovo numero
+            n_rand = genereNumero()
+            console.log(n_rand)
+        })
 </script>
 </body>
 </html>
