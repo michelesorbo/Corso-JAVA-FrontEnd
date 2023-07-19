@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indovina Numero</title>
+</head>
+<body>
+
+    <p>
+        Creare un gioco dove un utente deve indovinare un numero generato random compreso tra 1 e 100<br>
+        Il programma dovrà aiutare l'utente. Se l'utente inserisce un numero minore il programma dovrà dire che il numero
+        inserito è minore rispetto il numero da indovinare e viceversa.<br>
+    </p>
+    <h1>Indovina Numero</h1>
+    <p>Tentativi fatti: <span id="tentativi">0</span></p>
+    <p id="esito">Sbagliato il numero inserito è maggiore rispetto il numero da indovinare</p>
+    <p>
+        <input type="text" id="numero"><button id="btn">Indovina</button><button id="btn_reset">Ricomincia</button>
+    </p>
+    
+    <script>
+        let n_rand = Math.floor(Math.random() * 100) + 1
+        console.log(n_rand)
+</script>
+</body>
+</html>

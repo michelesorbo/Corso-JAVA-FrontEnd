@@ -138,3 +138,17 @@ Creare la url per la visualizzazione del form
 3)Aggiungere un campo imageField nel model del DB. Ricordati di rifare makemigrations e migrate
 4)Aggiungere al file urls le libreire settings e static e concatenarle a urlspatterns
 5)Nel template ricodati di utilizzare es corso.img.url per avere la posizione dell'immagine
+
+
+------Per Fare l'upload del progetto su Python AnyWhere ------
+1)Dalla Dashboard aprire una bash normale
+2)Clonare la repositori del progetto precedentemente uplodata su github -> git clone <url della risorsa githhub>
+3)Creare una virtualEnv ->mkvirtualenv --python=/usr/bin/python3.10 venv
+4)aprire una nuova web applicatione 
+5)Scegliere Manual install
+6)Aggiungere la virtualEnv appena creata al progetto
+7)Modificare il WSGI application
+8)Recuperare il path del progetto caricato, spostandoti nella cartella tramite bash e quando sei nell astessa
+posizione di manage.py lancira il comando -> pwd e copiare il path generato e modificare os.environ['DJANGO_SETTINGS_MODULE'] = '<nome della progetto>.settings'
+9)Copiare il nome dell'indirzzo generato da Python AnyWhere e andare a sostituirlo in 
+stetting -> ALLOWED_HOSTS=[indirizzo web dove trovare il sito]
