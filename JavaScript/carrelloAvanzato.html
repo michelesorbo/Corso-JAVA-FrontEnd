@@ -50,6 +50,11 @@
             <td class="totale_art">????</td>
         </tr>
 
+        <tr>
+            <td colspan="3"><b>Totale:</b></td>
+            <td class="totale_carrello">????</td>
+        </tr>
+
 
         <tr>
             <td colspan="4"><button id="btn">Ricalcola totale</button></td>
@@ -65,21 +70,32 @@
         const prezzi = document.querySelectorAll(".prezzo")
         const qta = document.querySelectorAll(".qta")
         const totali = document.querySelectorAll(".totale_art")
+        const totale_carrello = document.querySelector(".totale_carrello")
 
         aggTotali() //Appena carico la pagina calcolo il toale dei singoli prodotti
+        sommaTotale() //Aggiorno il totale del carrello
 
         for(let i=0; i<prodotti.length;i++){
             console.log("Il prodotto " + prodotti[i].innerHTML + " costa " + prezzi[i].innerHTML)
             qta[i].addEventListener("change", ()=>{
                 aggTotali()
+                sommaTotale()
             })
         }
 
         function aggTotali(){
             for(let i = 0; i < prodotti.length; i++){
                 totali[i].innerHTML = Number(qta[i].value) * Number(prezzi[i].innerHTML.replace("€","")) + "€"
-                console.log(qta[i].value + " - " + prezzi[i].innerHTML.replace("€",""))
+                //console.log(qta[i].value + " - " + prezzi[i].innerHTML.replace("€",""))
             }
+        }
+
+        function sommaTotale(){
+            let somma = 0
+            for(let i = 0; i < totali.length;i++){
+                somma += Number(totali[i].innerHTML.replace("€",""))
+            }
+            totale_carrello.innerHTML = somma+"€"
         }
         
 
