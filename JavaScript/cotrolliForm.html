@@ -7,12 +7,13 @@
 </head>
 <body>
 
-    <form method="post" action="#">
+    <h1>Pausa dalle 11:20 fino alle 11:35</h1>
+
         Nome<sup>*</sup>: <input type="text" name="nome" id="nome"><br>
         Password: <input type="password" name="pwd1" id="pwd1"><br>
         Ripeti Password: <input type="password" name="pwd2" id="pwd2"><br>
         <button id="btn">Invia</button>
-    </form>
+
     
     <script>
         /*
@@ -24,6 +25,33 @@
         Se tutto è rispettato far uscire un alert("FORM OK")
         altrimenti alert("Controlla i campi")
         */
+
+        const nome = document.querySelector("#nome")
+        const pwd1 = document.querySelector("#pwd1")
+        const pwd2 = document.querySelector("#pwd2")
+        const btn = document.querySelector("#btn")
+
+        
+
+        btn.addEventListener("click",()=>{
+            //Metodo Arcaico
+            let controllo = false
+            let str = nome.value
+            //Serve a cercare caretteri nella strina
+            for(let i = 0; i < str.length; i++){
+                if(!isNaN(str.charAt(i))){
+                    controllo = true //Se trovo un numero cambio il controllo da false a true
+                }
+            }
+            console.log(controllo)
+            if(nome.value.length >= 3 && !controllo && pwd1.value.length >= 8 && pwd1.value == pwd2.value){
+                alert("FORM OK")
+            }else{
+                alert("Rivedi Campi")
+            }
+        })
+        
+
     </script>
 </body>
 </html>
