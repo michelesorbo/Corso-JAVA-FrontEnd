@@ -30,10 +30,11 @@
         const pwd1 = document.querySelector("#pwd1")
         const pwd2 = document.querySelector("#pwd2")
         const btn = document.querySelector("#btn")
-
         
+        let rx_caratteri = /^\D[^@#*.,-_]{3,50}$/ //Solo caratteri in una stringa
 
         btn.addEventListener("click",()=>{
+            /*
             //Metodo Arcaico
             let controllo = false
             let str = nome.value
@@ -44,7 +45,15 @@
                 }
             }
             console.log(controllo)
+            
             if(nome.value.length >= 3 && !controllo && pwd1.value.length >= 8 && pwd1.value == pwd2.value){
+                alert("FORM OK")
+            }else{
+                alert("Rivedi Campi")
+            }
+            */
+
+            if(rx_caratteri.test(nome.value) && pwd1.value.length >= 8 && pwd1.value == pwd2.value){
                 alert("FORM OK")
             }else{
                 alert("Rivedi Campi")

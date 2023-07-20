@@ -24,6 +24,10 @@
         </tr>
 
         <tr>
+            <td colspan="4"><input type="text" id="sconto" placeholder="inserisci codice sconto"></td>
+        </tr>
+
+        <tr>
             <td colspan="4"><button id="btn">Ricalcola totale</button></td>
         </tr>
         
@@ -43,8 +47,17 @@
             totale_art.innerHTML = Number(qta.value) * Number(prezzo.innerHTML.substring(0,prezzo.innerHTML.length-1)) + "€"
         }
 
-        //qta.addEventListener("change", aggTotlae)
-        btn.addEventListener("click", aggTotlae)
+        function calcoloSconto(){
+            //Applicare Sconto
+            //codice GERALD = 8% sul totale
+            //Codice IVAN = 15% sul totale
+            //Altrimenti alert("Il codice non è valido")
+        }
+
+        
+
+        qta.addEventListener("change", aggTotlae)
+        btn.addEventListener("click", calcoloSconto)
 
         aggTotlae()
         
