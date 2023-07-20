@@ -43,6 +43,13 @@
             <td class="totale_art">????</td>
         </tr>
 
+        <tr>
+            <td class="nome_prodotto">Tatiera</td>
+            <td class="prezzo">55€</td>
+            <td><input class="qta" type="number" value="2"></td>
+            <td class="totale_art">????</td>
+        </tr>
+
 
         <tr>
             <td colspan="4"><button id="btn">Ricalcola totale</button></td>
@@ -53,6 +60,31 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
+    <script>
+        const prodotti = document.querySelectorAll(".nome_prodotto")
+        const prezzi = document.querySelectorAll(".prezzo")
+        const qta = document.querySelectorAll(".qta")
+        const totali = document.querySelectorAll(".totale_art")
+
+        aggTotali() //Appena carico la pagina calcolo il toale dei singoli prodotti
+
+        for(let i=0; i<prodotti.length;i++){
+            console.log("Il prodotto " + prodotti[i].innerHTML + " costa " + prezzi[i].innerHTML)
+            qta[i].addEventListener("change", ()=>{
+                aggTotali()
+            })
+        }
+
+        function aggTotali(){
+            for(let i = 0; i < prodotti.length; i++){
+                totali[i].innerHTML = Number(qta[i].value) * Number(prezzi[i].innerHTML.replace("€","")) + "€"
+                console.log(qta[i].value + " - " + prezzi[i].innerHTML.replace("€",""))
+            }
+        }
+        
+
+        
+    </script>
 
 
 </body>
