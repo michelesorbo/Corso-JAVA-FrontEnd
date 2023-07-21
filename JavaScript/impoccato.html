@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impiccato</title>
+</head>
+<body>
+
+    
+    <h2>Il gioco dell'impiccato</h2>
+
+    <p id="tentativi"></p>
+
+    <p id="parola"></p>
+    <p><input type="text" id="ins"></p>
+    <button id="btn">Indovina</button><button id="btn_reset">Riparti</button>
+    <p id="ris"></p>
+
+    <script>
+        const parola = document.querySelector("#parola")
+        const ins = document.querySelector("#ins")
+        const btn = document.querySelector("#btn")
+        const btn_reset = document.querySelector("#btn_reset")
+        const ris = document.querySelector("#ris")
+        const tentativi = document.querySelector("#tentativi")
+
+        let p_scelta
+        let indovinate //Array vuoto
+        let vite//Vite
+        generaParola()
+
+        function generaParola(){
+            let parole_random = ["michele", "casa", "javascript", "python", "carrello", "mese"]
+            p_scelta = parole_random[Math.floor(Math.random() * parole_random.length)]
+
+            indovinate = [] //Array per inserimento # o lettere indovinate
+            console.log(p_scelta)
+
+            //Genere gli # nell'array in base alla parola scelta
+            for(let i = 0; i< p_scelta.length; i++){
+                indovinate.push("#")
+            }
+
+            stampaAR(indovinate) //Richoamo stampa AR per stampare l'array sulla pagina
+            vite = 10 //Imposto il numero di vite a 10
+            tentativi.innerHTML = "Hai ancora " + vite + " vite"
+            
+        }
+
+        function stampaAR(ar){
+            parola.innerHTML = "" //Resetto il paragrafo 
+            ar.forEach(el => {
+                parola.innerHTML += el
+            });
+        }
+
+        btn.addEventListener("click", ()=>{
+            let rx_caratteri = /^\D[^@#*.,-_]{0,32}$/ //Solo caratteri in una stringa
+            
+            if(vite > 0){ //Controllo se ha ancora vite disponibili
+                vite-- //Decremento la vita per il tentativo fatto
+                tentativi.innerHTML = "Hai ancora " + vite + " vite"
+                
+                if(rx_caratteri.test(ins.value)){ //Controllo se ha inserito solo caratteri
+                    ris.innerHTML = "" //Resetto il messaggio d'errore
+                    
+                    for(c of ins.value){ //Divido la parola inserita nella casella di input in singolo caratteri
+                    console.log(c)
+                        //ciclo la parola scelta in modo randomico per vedere se il carattere è presente nella parola
+                        for(let i = 0; i<p_scelta.length;i++){
+                            if(c==p_scelta[i]){ //Controllo se il carattere inserito è uguale al carattere della parola
+                                indovinate[i] = c //Sostituiso il carattere trovato nell'array 
+                                stampaAR(indovinate) //Ristampo l'array
+                            }
+                        }
+                }
+
+                }else{
+                    ris.innerHTML = "Inserisci una parola valida"
+                }
+            }else{
+                ris.innerHTML = "SEI MORTO"
+            }
+            ins.value = "" //resetto il campo ins
+        })
+
+        btn_reset.addEventListener("click", generaParola)
+
+
+
+    </script>
+    
+</body>
+</html>
